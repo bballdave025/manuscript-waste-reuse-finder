@@ -11,23 +11,40 @@ Before my description of the tool, I want to put here several images that illust
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
 
-Title: Ordinarium cisterciense 
+Title: _Ordinarium cisterciense_ 
 
 Citation page: https://doi.org/10.11588/diglit.9273#0001
 
 [Public Domain Mark 1.0 Universal (No Copyright)](https://creativecommons.org/publicdomain/mark/1.0/)
 
-#### Example 1.1 : Contains Manuscript Reuse Fragment
+[More information (bballdave025's metadata)](./Heidelberg_-_salVII73_URL.txt)
+
+
+### Example 1.1 : Image Contains Manuscript Reuse Fragment
+
+<b>This is in the positive class.</b>
 
 <br/>
 <div>
-  <img src="./Heidelberg_salVII73_front-cover_500wid.jpg"
+  <img src="./Heidelberg_-_salVII73_front-cover_500wid.jpg"
        alt="Front cover of Ordinarium cisterciense, Heidelberg Codex Salemitana VII,73. Example of Manuscript Reuse Fragment"
-       width="500px">
+       width="2500px">
 </div>
 <br/>
 
 Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red.
 
 
+### Example 1.2 : Image without any Manuscript Reuse
 
+<b>This is in the negative class.</b>
+
+<br/>
+<div>
+  <img src="./Heidelberg_-_salVII73_00186l_500wid.jpg"
+       alt="One of the leaves/pages inside Ordinarium cisterciense. Example without Manuscript Reuse."
+       width="250px">
+</div>
+<br/>
+
+One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page.
