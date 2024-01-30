@@ -6,7 +6,7 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 ## Examples of Reused Manuscript Fragments (and of what are not so classified)
 
-Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse".
+Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
@@ -19,9 +19,15 @@ Citation page: https://doi.org/10.11588/diglit.9273#0001
 
 #### Example 1.1 : Contains Manuscript Reuse Fragment
 
+<br/>
+<div>
+  <img src="./Heidelberg_salVII73_front-cover_500wid.jpg"
+       alt="Front cover of Ordinarium cisterciense, Heidelberg Codex Salemitana VII,73. Example of Manuscript Reuse Fragment"
+       width="500px">
+</div>
+<br/>
 
-
-Binding (book cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red and blue.
+Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red.
 
 
 
