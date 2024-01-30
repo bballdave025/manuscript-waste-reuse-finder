@@ -29,7 +29,7 @@ Citation page: https://doi.org/10.11588/diglit.9273#0001
   <img src="./Heidelberg_-_salVII73_front-cover_500wid.jpg"
        alt="Front cover of Ordinarium cisterciense, Heidelberg Codex Salemitana VII,73. Example of Manuscript Reuse Fragment"
 
-       width="200px">
+       width="250px">
 </div>
 <br/>
 
