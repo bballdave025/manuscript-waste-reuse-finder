@@ -13,7 +13,7 @@ Before my description of the tool, I want to put here several images that illust
 
 Title: _Ordinarium cisterciense_ 
 
-Citation page: https://doi.org/10.11588/diglit.9273#0001
+Citation page: https://doi.org/10.11588/diglit.9273
 
 [Public Domain Mark 1.0 Universal (No Copyright)](https://creativecommons.org/publicdomain/mark/1.0/)
 
@@ -28,12 +28,11 @@ Citation page: https://doi.org/10.11588/diglit.9273#0001
 <div>
   <img src="./Heidelberg_-_salVII73_front-cover_500wid.jpg"
        alt="Front cover of Ordinarium cisterciense, Heidelberg Codex Salemitana VII,73. Example of Manuscript Reuse Fragment"
-
        width="250px">
 </div>
 <br/>
 
-Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red.
+Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red. [Page citation](https://doi.org/10.11588/diglit.9273#0001)
 
 
 ### Example 1.2 : Image without any Manuscript Reuse
@@ -42,10 +41,10 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 
 <br/>
 <div>
-  <img src="./Heidelberg_-_salVII73_00186l_500wid.jpg"
+  <img src="./Heidelberg_-_salVII73_00186_500wid.jpg"
        alt="One of the leaves/pages inside Ordinarium cisterciense. Example without Manuscript Reuse."
        width="250px">
 </div>
 <br/>
 
-One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page.
+One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0001)
