@@ -47,4 +47,4 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 </div>
 <br/>
 
-One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0001)
+One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0186)
