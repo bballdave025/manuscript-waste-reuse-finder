@@ -8,7 +8,7 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
-[LINK FOR THE AFTER-IMAGE PART](#Details_of_the_Model)
+[LINK FOR THE AFTER-IMAGE PART](#Details-of-the-Model)
 
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
