@@ -157,17 +157,21 @@ While the GDR is no longer extant, nor is its State Archive Management departmen
 
 This looks a bit like a land-grant. This is the left-hand side of what makes up the pastedown - part of the original document was obviously cut off on the right. The left-hand side of what's left is the front pastedown. 
 
+<hr/>
+
 <b> Positive, Binding Reinforcers, FamilySearch DGS 4535287 frame 182</b>
 
 <br/>
 <div>
   <img src="./FamilySearch_-_DGS004534287_00172_-_reuseTrue_1000w.jpg"
        alt="Swedish document on FamilySearch"
-       width="500px">
+       width="375px">
 </div>
 <br/>
 
 This is a document from Sweden. The reuse in in those four, detached binding strengtheners, which would have originally glued to the wood on the left-hand side. Look closely (maybe click on the image to see a larger version) and you can see the writing.
+
+<hr/>
 
 <b> Positive, Outside binding - front and back, FamilySearch DGS 4535287 frame 360</b>
 
@@ -175,9 +179,11 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 <div>
   <img src="./FamilySearch_-_DGS004534287_00360_-_reuseTrue_1000w.jpg"
        alt="Another Swedish Document from FamilySearch"
-       width="500px">
+       width="375px">
 </div>
 <br/>
+
+<hr/>
 
 <b> Positive, Front binding, FamilySearch DGS 8104286 frame 897</b>
 
@@ -185,12 +191,13 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 <div>
   <img src="./FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
        alt="Another Swedish Document from FamilySearch"
-       width="500px">
+       width="250px">
 </div>
 <br/>
 
 This is the first such image I saw in the FamilySearch collections. I was taking an online class in paleography and codicology (manuscript studies) while working at the Granite Mountain Records Vault, and this was an image on one of the microfilms I digitized. It has readings and music for a specific Mass.
 
+<hr/>
 
 ## Tool Description for the Family History Technology Workshop
 
