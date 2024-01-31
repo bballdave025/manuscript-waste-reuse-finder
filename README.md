@@ -15,7 +15,7 @@ Before my description of the tool, I want to put here several images that illust
 
 Title: _Ordinarium cisterciense_ 
 
-Citation page: https://doi.org/10.11588/diglit.9273
+Citation link: https://doi.org/10.11588/diglit.9273
 
 [Public Domain Mark 1.0 Universal (No Copyright)](https://creativecommons.org/publicdomain/mark/1.0/)
 
@@ -34,7 +34,7 @@ Citation page: https://doi.org/10.11588/diglit.9273
 </div>
 <br/>
 
-Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red. [Page citation](https://doi.org/10.11588/diglit.9273#0001)
+Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red. [Image 1.1 Citation Link](https://doi.org/10.11588/diglit.9273#0001)
 
 
 ### Example 1.2 : Image without any Manuscript Reuse
@@ -49,7 +49,7 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 </div>
 <br/>
 
-One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0186)
+One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Image 1.1 Citation Link](https://doi.org/10.11588/diglit.9273#0186)
 
 
 ### Example 2 : FamilySearch DGS 007996631 (item 1)
@@ -64,7 +64,7 @@ Citation:
 
 > No citation is available
 
-(Quoted from the FamilySearch Information Tab in the Record Viewer for this image)
+(Quoted from the FamilySearch Information Tab in the Record Viewer for this image,) but see [this small note](#Example-2---Appendix-A).
 
 
 ### Example 2.1 : Image of Binding Without Manuscript Reuse
@@ -127,7 +127,7 @@ This is another standard manuscript page. It comes from the book as the previous
 This is another standard manuscript page. It comes from the same DGS - though not the same book, as the previous three images.
 
 
-### Example 2 : Appendix A
+### Example 2 - Appendix A
 
 There was no official citation for this document. However, the microfilm's information board has the following:
 
