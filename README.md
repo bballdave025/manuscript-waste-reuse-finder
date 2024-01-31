@@ -8,14 +8,14 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
-[LINK FOR THE AFTER-IMAGE PART](#Details-of-the-Model)
+[LINK FOR THE AFTER-IMAGE PART](#Tool-Description-for-the-Family-History-Technology-Workshop)
 
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
 
 Title: _Ordinarium cisterciense_ 
 
-Citation page: https://doi.org/10.11588/diglit.9273
+Citation link: https://doi.org/10.11588/diglit.9273
 
 [Public Domain Mark 1.0 Universal (No Copyright)](https://creativecommons.org/publicdomain/mark/1.0/)
 
@@ -34,7 +34,7 @@ Citation page: https://doi.org/10.11588/diglit.9273
 </div>
 <br/>
 
-Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red. [Page citation](https://doi.org/10.11588/diglit.9273#0001)
+Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment appears to come from a large, decorated manuscript. Note the capital letters in red. [Image 1.1 Citation Link](https://doi.org/10.11588/diglit.9273#0001)
 
 
 ### Example 1.2 : Image without any Manuscript Reuse
@@ -49,7 +49,7 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 </div>
 <br/>
 
-One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0186)
+One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Image 1.1 Citation Link](https://doi.org/10.11588/diglit.9273#0186)
 
 
 ### Example 2 : FamilySearch DGS 007996631 (item 1)
@@ -64,7 +64,7 @@ Citation:
 
 > No citation is available
 
-(Quoted from the FamilySearch Information Tab in the Record Viewer for this image)
+(Quoted from the FamilySearch Information Tab in the Record Viewer for this image,) but see [this small note](#Example-2---Appendix-A).
 
 
 ### Example 2.1 : Image of Binding Without Manuscript Reuse
@@ -127,7 +127,7 @@ This is another standard manuscript page. It comes from the book as the previous
 This is another standard manuscript page. It comes from the same DGS - though not the same book, as the previous three images.
 
 
-### Example 2 : Appendix A
+### Example 2 - Appendix A
 
 There was no official citation for this document. However, the microfilm's information board has the following:
 
@@ -141,6 +141,62 @@ RAT. STADTBUCHER
 ```
 
 While the GDR is no longer extant, nor is its State Archive Management department, I imagine the Rostock City Archives still exist.
+
+
+### Other Examples, whose citation and usage I have, but don't have time to write up.
+
+<b> Positive, Rear Pastedown, Bibliothèque Nationale de France. Ms French 837</b>
+
+<br/>
+<div>
+  <img src="./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00743_500w"
+       alt="French National Library, Ms French 837"
+       width="250px">
+</div>
+<br/>
+
+This looks a bit like a land-grant. This is the left-hand side of what makes up the pastedown - part of the original document was obviously cut off on the right. The left-hand side of what's left is the front pastedown. 
+
+<b> Positive, Binding Reinforcers, FamilySearch DGS 4535287 frame 182</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS004534287_00172_-_reuseTrue_1000w.jpg"
+       alt="Swedish document on FamilySearch"
+       width="250px">
+</div>
+<br/>
+
+This is a document from Sweden. The reuse in in those four, detached binding strengtheners, which would have originally glued to the wood on the left-hand side. Look closely (maybe click on the image to see a larger version) and you can see the writing.
+
+<b> Positive, Outside binding - front and back, FamilySearch DGS 4535287 frame 360</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS004534287_00360_-_reuseTrue_1000w.jpg"
+       alt="Another Swedish Document from FamilySearch"
+       width="250px">
+</div>
+<br/>
+
+<b> Positive, Front binding, FamilySearch DGS 8104286 frame 897</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
+       alt="Another Swedish Document from FamilySearch"
+       width="250px">
+</div>
+<br/>
+
+This is the first such image I saw in the FamilySearch collections. I was taking an online class in paleography and codicology (manuscript studies) while working at the Granite Mountain Records Vault, and this was an image on one of the microfilms I digitized. It has readings and music for a specific Mass.
+
+
+## Tool Description for the Family History Technology Workshop
+
+I am working on a tool, now informally referred to as "Fragment Finder", that will open up new sources of names, dates, etc. applicable to family history. These interesting and useful fragments will be defined and discussed in the second paragraph. The purpose of this tool is to take large numbers of document images from archives, libraries, and collections and find those images which contain reused manuscript fragments. The prototype tool consists of a Neural-Network model created by using transfer learning from ResNet-50. The fragment images used to train and test the tool were retrieved from FamilySearch as well as from university and national libraries. We – I and Keith Prisbrey, who deferred to me for this presentation – used a labeled dataset of 622 images, of which approximately 1 in 10 showed fragments. After training, our accuracy on the test set was 96.77%. Our tool, with continued development and training, will permit finding reused manuscript fragments.
+
+Manuscript fragments are, quite simply, pages or groups of pages which have handwriting on them, but which do not contain the complete original work. The present tool is especially concerned with single pieces of so-called waste parchment – or even waste paper – that were reused to make bindings or book covers for new codices/books. Some reused manuscript fragments originated from fancy, expensive, and literary sources called Decorated or Illuminated Manuscripts – the Book of Kells being one conspicuous example. Others include contracts, arrest records, deeds, land-grants, notes of debts due to the bookmaker, and other records that include names, dates, locations, professions, and relationships.
 
 
 ## Details of the Model
