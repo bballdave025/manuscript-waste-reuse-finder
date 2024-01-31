@@ -169,7 +169,7 @@ This looks like it might be a land-grant, or perhaps a deed, or perhaps I'm way 
 </div>
 <br/>
 
-This is a document from Sweden. The reuse in in those four, detached binding strengtheners, which would have originally glued to the wood on the left-hand side. Look closely (maybe click on the image to see a larger version) and you can see the writing.
+This is a document from Sweden. The reuse in in those four, detached binding strengtheners, which would have originally glued to the wood on the left-hand side. Look closely (maybe click on the image to see a larger version) and you can see the writing. The writing on the very left of the image - what's wrapped over from the front binding - is also reuse and is much more visible to me.
 
 <hr/>
 
