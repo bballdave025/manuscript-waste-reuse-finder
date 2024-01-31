@@ -149,7 +149,7 @@ While the GDR is no longer extant, nor is its State Archive Management departmen
 
 <br/>
 <div>
-  <img src="./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00743_500w"
+  <img src="./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00743_500w.jpg"
        alt="French National Library, Ms French 837"
        width="250px">
 </div>
@@ -163,7 +163,7 @@ This looks a bit like a land-grant. This is the left-hand side of what makes up 
 <div>
   <img src="./FamilySearch_-_DGS004534287_00172_-_reuseTrue_1000w.jpg"
        alt="Swedish document on FamilySearch"
-       width="250px">
+       width="500px">
 </div>
 <br/>
 
@@ -175,7 +175,7 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 <div>
   <img src="./FamilySearch_-_DGS004534287_00360_-_reuseTrue_1000w.jpg"
        alt="Another Swedish Document from FamilySearch"
-       width="250px">
+       width="500px">
 </div>
 <br/>
 
@@ -185,7 +185,7 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 <div>
   <img src="./FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
        alt="Another Swedish Document from FamilySearch"
-       width="250px">
+       width="500px">
 </div>
 <br/>
 
