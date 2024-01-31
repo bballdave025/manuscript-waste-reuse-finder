@@ -88,7 +88,7 @@ A front-cover binding from a Rostock (Germany) Hausbücher. To me, it seems a ve
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS007996631_00009_500w.jpg"
+  <img src="./FamilySearch_-_DGS007996631_00010_-_stitchTrue_500w.jpg"
        alt="The pastedown part of the binding, shown in FamilySearch DGS 7996631, frame 10. No manuscript reuse."
        width="250px">
 </div>
