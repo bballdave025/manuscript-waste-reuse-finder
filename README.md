@@ -8,6 +8,8 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
+[LINK FOR THE AFTER-IMAGE PART](#)
+
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
 
@@ -20,7 +22,7 @@ Citation page: https://doi.org/10.11588/diglit.9273
 [More information (bballdave025's metadata)](./Heidelberg_-_salVII73_URL.txt)
 
 
-### Example 1.1 : Image Contains Manuscript Reuse Fragment
+### Example 1.1 : Image of Binding Containing Manuscript Reuse Fragment
 
 <b>This is in the positive class.</b>
 
@@ -48,3 +50,99 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 <br/>
 
 One of the interior pages of _Ordinarium cisterciense_. One might call this a standard manuscript page. [Page citation](https://doi.org/10.11588/diglit.9273#0186)
+
+
+### Example 2 : FamilySearch DGS 007996631 (item 1)
+
+Catalog Record: Hausbücher 1397-1746
+
+Film/Digital Note: 	Hausbücher 1493-1521 Altstadt: Hausbücher 1522-1716
+
+Geographic Location for FamilySearch Catalog: Germany, Mecklenburg-Schwerin, Rostock
+
+Citation:
+
+> No citation is available
+
+(Quoted from the FamilySearch Information Tab in the Record Viewer for this image)
+
+
+### Example 2.1 : Image of Binding Without Manuscript Reuse
+
+<b>This is in the negative class.</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS007996631_00009_500w.jpg"
+       alt="The manuscript cover, shown in FamilySearch DGS 7996631, frame 9. No manuscript reuse."
+       width="250px">
+</div>
+<br/>
+
+A front-cover binding from a Rostock (Germany) Hausbücher. To me, it seems a very cool, antique binding. However, there is no evidence of another manuscript having been used to help protect the book.
+
+
+### Example 2.2 : Image of Binding Pastedown Without Manuscript Reuse
+
+<b>This is in the negative class.</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS007996631_00009_500w.jpg"
+       alt="The pastedown part of the binding, shown in FamilySearch DGS 7996631, frame 10. No manuscript reuse."
+       width="250px">
+</div>
+<br/>
+
+This inside part of the cover is called a pastedown. It's used to help keep the wrapping parts of the binding in place as well as to reinforce the binding's protection of the book. This one shows no trace of being reused manuscript.
+
+
+### Example 2.3 : Image without any Manuscript Reuse
+
+<b>This is in the negative class.</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS007996631_00062_-_stitchTrue_500w.jpg"
+       alt="A standard manuscript page (no reuse) from FamilySearch DGS 7796631, frame 62."
+       width="250px">
+</div>
+<br/>
+
+This is another standard manuscript page. It comes from the book as the previous two images.
+
+
+### Example 2.4 : Image without any Manuscript Reuse
+
+<b>This is in the negative class.</b>
+
+<br/>
+<div>
+  <img src="./FamilySearch_-_DGS007996631_00991_500w.jpg"
+       alt="A standard manuscript page (no reuse) from FamilySearch DGS 7796631, frame 991."
+       width="250px">
+</div>
+<br/>
+
+This is another standard manuscript page. It comes from the same DGS - though not the same book, as the previous three images.
+
+
+### Example 2 : Appendix A
+
+There was no official citation for this document. However, the microfilm's information board has the following:
+
+```
+STAATL. ARCHIVVERW. DER DDR
+RAT DES BEZIRKES ROSTOCK
+GENEALOGISCHE DOKUMENTE
+STADTARCHIV ROSTOCK
+RAT. STADTBUCHER
+1-3.1 45
+```
+
+While the GDR is no longer extant, nor is its State Archive Management department, I imagine the Rostock City Archives still exist.
+
+
+## Details of the Model
+
+Coming soon!
