@@ -109,7 +109,7 @@ This inside part of the cover is called a pastedown. It's used to help keep the 
 </div>
 <br/>
 
-This is another standard manuscript page. It comes from the book as the previous two images.
+This is another standard manuscript page. It comes from the same book as the previous two images.
 
 
 ### Example 2.4 : Image without any Manuscript Reuse
@@ -145,7 +145,7 @@ While the GDR is no longer extant, nor is its State Archive Management departmen
 
 ### Other Examples, whose citation and usage I have, but don't have time to write up.
 
-<b> Positive, Rear Pastedown, Bibliothèque Nationale de France. Ms French 837</b>
+<b> Positive (has reuse), Rear Pastedown, Bibliothèque Nationale de France. Ms French 837</b>
 
 <br/>
 <div>
@@ -155,11 +155,11 @@ While the GDR is no longer extant, nor is its State Archive Management departmen
 </div>
 <br/>
 
-This looks a bit like a land-grant. This is the left-hand side of what makes up the pastedown - part of the original document was obviously cut off on the right. The left-hand side of what's left is the front pastedown. 
+This looks like it might be a land-grant, or perhaps a deed, or perhaps I'm way off. This is the right-hand side of what makes up the pastedown - part of the original document was obviously cut off on the right. The left-hand side of what's left is the front pastedown. 
 
 <hr/>
 
-<b> Positive, Binding Reinforcers, FamilySearch DGS 4535287 frame 182</b>
+<b> Positive (has reuse), Binding Reinforcers, FamilySearch DGS 4535287 frame 182</b>
 
 <br/>
 <div>
@@ -173,7 +173,7 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 
 <hr/>
 
-<b> Positive, Outside binding - front and back, FamilySearch DGS 4535287 frame 360</b>
+<b> Positive (has reuse), Outside Binding - Front and Back, FamilySearch DGS 4535287 frame 360</b>
 
 <br/>
 <div>
@@ -185,17 +185,17 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 
 <hr/>
 
-<b> Positive, Front binding, FamilySearch DGS 8104286 frame 897</b>
+<b> Positive (has reuse), Front Binding, FamilySearch DGS 8104286 frame 897</b>
 
 <br/>
 <div>
   <img src="./FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
-       alt="Another Swedish Document from FamilySearch"
+       alt="Words and music"
        width="250px">
 </div>
 <br/>
 
-This is the first such image I saw in the FamilySearch collections. I was taking an online class in paleography and codicology (manuscript studies) while working at the Granite Mountain Records Vault, and this was an image on one of the microfilms I digitized. It has readings and music for a specific Mass.
+This is the first such image I saw in the FamilySearch collections. I was taking an online class in paleography and codicology (manuscript studies) while working at the Granite Mountain Records Vault, and this was an image on one of the microfilms I digitized. If I understand correctly, it has readings and music for a specific Mass.
 
 <hr/>
 
