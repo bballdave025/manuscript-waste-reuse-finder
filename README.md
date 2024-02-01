@@ -28,7 +28,7 @@ Citation link: https://doi.org/10.11588/diglit.9273
 
 <br/>
 <div>
-  <img src="./Heidelberg_-_salVII73_front-cover_500wid.jpg"
+  <img src="./img/Heidelberg_-_salVII73_front-cover_500wid.jpg"
        alt="Front cover of Ordinarium cisterciense, Heidelberg Codex Salemitana VII,73. Example of Manuscript Reuse Fragment"
        width="250px">
 </div>
@@ -43,7 +43,7 @@ Binding (front cover) for the main book, _Ordinarium cisterciense_. The fragment
 
 <br/>
 <div>
-  <img src="./Heidelberg_-_salVII73_00186_500wid.jpg"
+  <img src="./img/Heidelberg_-_salVII73_00186_500wid.jpg"
        alt="One of the leaves/pages inside Ordinarium cisterciense. Example without Manuscript Reuse."
        width="250px">
 </div>
@@ -73,7 +73,7 @@ Citation:
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS007996631_00009_500w.jpg"
+  <img src="./img/FamilySearch_-_DGS007996631_00009_500w.jpg"
        alt="The manuscript cover, shown in FamilySearch DGS 7996631, frame 9. No manuscript reuse."
        width="250px">
 </div>
@@ -88,7 +88,7 @@ A front-cover binding from a Rostock (Germany) Hausbücher. To me, it seems a ve
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS007996631_00010_-_stitchTrue_500w.jpg"
+  <img src="./img/FamilySearch_-_DGS007996631_00010_-_stitchTrue_500w.jpg"
        alt="The pastedown part of the binding, shown in FamilySearch DGS 7996631, frame 10. No manuscript reuse."
        width="250px">
 </div>
@@ -103,7 +103,7 @@ This inside part of the cover is called a pastedown. It's used to help keep the 
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS007996631_00062_-_stitchTrue_500w.jpg"
+  <img src="./img/FamilySearch_-_DGS007996631_00062_-_stitchTrue_500w.jpg"
        alt="A standard manuscript page (no reuse) from FamilySearch DGS 7796631, frame 62."
        width="250px">
 </div>
@@ -118,7 +118,7 @@ This is another standard manuscript page. It comes from the same book as the pre
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS007996631_00991_500w.jpg"
+  <img src="./img/FamilySearch_-_DGS007996631_00991_500w.jpg"
        alt="A standard manuscript page (no reuse) from FamilySearch DGS 7796631, frame 991."
        width="250px">
 </div>
@@ -149,7 +149,7 @@ While the GDR is no longer extant, nor is its State Archive Management departmen
 
 <br/>
 <div>
-  <img src="./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00743_500w.jpg"
+  <img src="./img/BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00743_500w.jpg"
        alt="French National Library, Ms French 837"
        width="250px">
 </div>
@@ -163,7 +163,7 @@ This looks like it might be a land-grant, or perhaps a deed, or perhaps I'm way 
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS004534287_00172_-_reuseTrue_1000w.jpg"
+  <img src="./img/FamilySearch_-_DGS004534287_00172_-_reuseTrue_1000w.jpg"
        alt="Swedish document on FamilySearch"
        width="375px">
 </div>
@@ -177,7 +177,7 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS004534287_00360_-_reuseTrue_1000w.jpg"
+  <img src="./img/FamilySearch_-_DGS004534287_00360_-_reuseTrue_1000w.jpg"
        alt="Another Swedish Document from FamilySearch"
        width="375px">
 </div>
@@ -189,7 +189,7 @@ This is a document from Sweden. The reuse in in those four, detached binding str
 
 <br/>
 <div>
-  <img src="./FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
+  <img src="./img/FamilySearch_-_DGS008104286_00897_-_reuseTrue_500w.jpg"
        alt="Words and music"
        width="250px">
 </div>
