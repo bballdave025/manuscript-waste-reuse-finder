@@ -29,8 +29,8 @@ from tqdm import tqdm
 
 #just_one_pdf_at_a_time = True
 
-fromdir = "C:/Users/Anast/Desktop/_waiting_pdfs"
-outdir = "C:/Users/Anast/Desktop/_waiting_wild_imgs_out"
+fromdir = "C:/Users/Anast/Desktop/_pdfs_for_images_-_workdir"
+outdir = "C:/Users/Anast/Desktop/_imgs_from_pdfs_-_workdir"
 
 for each_path in os.listdir(fromdir):
   if ".pdf" in each_path:

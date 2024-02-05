@@ -1,0 +1,950 @@
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]") && find /cygdrive/d/Datasets_and_Models/P2_MSS -type f -name "*True.${this_ext}" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; echo; echo "### Last class for ${this_ext_up} ###"; echo "# Original Full Path: \"${orig}\""; last_0_to=$(echo "${orig}" | awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"'); dir_w_file=$(echo "${orig}" | awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"'); echo "# Directory containing file: ${dir_w_file}"; echo "# Complete filename part: ${last_0_to}"; this_class=$(echo "${last_0_to}" | sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"'); new_fname=$(echo "${orig}" | sed '"'"'s#^\(.*\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"'); echo "# New filename ${new_fname}"; echo "# c#${this_class}";' | head -n 30
+
+### Last class for  ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# c#e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+
+### Last class for  ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# c#StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+
+### Last class for  ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# c#StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+
+### Last class for  ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/
+# Complete filename part: HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+# c#HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+
+### Last class for  ###
+xargs: bash: terminated by signal 13
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+
+
+
+
+this_ext="jpg" && \
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]") && \
+echo "${this_ext} ${this_ext_up}" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -name "*True.${this_ext}" -print0 | 
+    xargs -I'{}' -0 bash -c '
+orig="{}"; 
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo; 
+echo "### Last class for ${this_ext_up} ###"; 
+echo "# Original Full Path: \"${orig}\""; 
+last_0_to=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"'); 
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"'); 
+echo "# Directory containing file: ${dir_w_file}"; 
+echo "# Complete filename part: ${last_0_to}"; 
+this_class=$(echo "${last_0_to}" | \
+sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"'); 
+new_fname=$(echo "${orig}" | \
+sed '"'"'s#^\(.*\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"'); 
+echo "# New filename ${new_fname}"; 
+echo "# c#${this_class}";
+' | head -n 30
+
+
+
+
+
+
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]") && \
+echo "${this_ext} ${this_ext_up}" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -name "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+last_0_to=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: ${dir_w_file}";
+echo "# Complete filename part: ${last_0_to}";
+this_class=$(echo "${last_0_to}" | \
+sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+sed '"'"'s#^\(.*\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+' | head -n 30
+jpg JPG
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-.jpg
+# c#reuseTrue
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-.jpg
+# c#stitchTrue
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-.jpg
+# c#stitchTrue
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/
+# Complete filename part: HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg
+# c#stitchTrue
+
+### Last class for JPG ###
+xargs: bash: terminated by signal 13
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -name "*True.${this_ext}" -print0 | 
+    xargs -I'{}' -0 bash -c '
+orig="{}"; 
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo; 
+echo "### Last class for ${this_ext_up} ###"; 
+echo "# Original Full Path: \"${orig}\""; 
+last_0_to=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"'); 
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"'); 
+echo "# Directory containing file: ${dir_w_file}"; 
+echo "# Complete filename part: ${last_0_to}"; 
+this_class=$(echo "${last_0_to}" | \
+sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"'); 
+new_fname=$(echo "${orig}" | \
+sed '"'"'s#^\(.*\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"'); 
+echo "# New filename ${new_fname}"; 
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\"" && \
+  { echo "#   success"; \
+    echo "${new_fname}" >> \
+	  after_first_class_find.lst; } || \
+  { echo "#   FAILURE"; \
+    echo -e "\n Old:\n${orig}\n New:\n${new_fname}" >> \
+	  failed_at_first_class_find.lst; };
+' | head -n 50 && \
+ts=${date +'%s_%Y-%m-%dT%H%M%S%z'} && \
+mv "after_first_class_find.lst" \
+     "after_first_class_find_${ts}.lst" &&
+mv "failed_at_first_class_find.lst" \
+     "failed_at_first_class_find_${ts}.lst";
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Sun Feb  4 12:23:13 MST 2024
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707074595
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+ls: cannot access '*.lst': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -name "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+last_0_to=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: ${dir_w_file}";
+echo "# Complete filename part: ${last_0_to}";
+this_class=$(echo "${last_0_to}" | \
+sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+sed '"'"'s#^\(.*\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\"" && \
+  { echo "#   success"; \
+    echo "${new_fname}" >> \
+          after_first_class_find.lst; } || \
+  { echo "#   FAILURE"; \
+    echo -e "\n Old:\n${orig}\n New:\n${new_fname}" >> \
+          failed_at_first_class_find.lst; };
+' | head -n 50 && \
+ts=${date +'%s_%Y-%m-%dT%H%M%S%z'} && \
+mv "after_first_class_find.lst" \
+     "after_first_class_find_${ts}.lst" &&
+mv "failed_at_first_class_find.lst" \
+     "failed_at_first_class_find_${ts}.lst";
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-.jpg
+# c#reuseTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-.jpg"
+#   success
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-.jpg
+# c#stitchTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-.jpg"
+#   success
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-.jpg
+# c#stitchTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-.jpg"
+#   success
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/
+# Complete filename part: HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg
+# c#stitchTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg"
+#   success
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010_stitchTrue.jpg"
+# Directory containing file: /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/
+# Complete filename part: HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010.jpg
+# c#stitchTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010.jpg"
+#   success
+xargs: bash: terminated by signal 13
+-bash: ${date +'%s_%Y-%m-%dT%H%M%S%z'}: bad substitution
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+ls: cannot access '*.out': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat after_first_class_find.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010.jpg
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+
+
+
+
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh
+
+#spacing
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+#spacing
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 | 
+    xargs -I'{}' -0 bash -c '
+orig="{}"; 
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo; 
+echo "### Last class for ${this_ext_up} ###"; 
+echo "# Original Full Path: \"${orig}\""; 
+to_last_0=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"'); 
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"'); 
+echo "# Directory containing file: \"${dir_w_file}\""; 
+echo "# Complete filename part: ${to_last_0}"; 
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"'); 
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"'); 
+echo "# New filename ${new_fname}"; 
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' > rename_of_it_jpg_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+
+
+
+
+#  && \
+#ts=$(date +'%s_%Y-%m-%dT%H%M%S%z') && \
+#mv "after_first_class_find.lst" \
+#     "after_first_class_find_${ts}.lst" &&
+#mv "failed_at_first_class_find.lst" \
+#     "failed_at_first_class_find_${ts}.lst";
+
+
+
+
+
+
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Sun Feb  4 13:03:15 MST 2024
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s_%Y-%m-%dT%H%M%S%z'
+1707077021_2024-02-04T130341-0700
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+ls: cannot access '*.lst': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+ls: cannot access '*.out': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+770
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+307
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ \
+>   -type f -not iname "*True.jpg" -a -not -iname "*True.png" -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+find: paths must precede expression: `iname'
+0
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f -not -iname "*True.jpg" -a -not -iname "*True.png" -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l26651
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+# PROBLEM ABOVE
+
+
+
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && find /cygdrive/d/Datasets_and_Models/P2_MSS   -type f -iname "*True.${this_ext}" -print0 |      xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_0=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_0}";
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' | tee -a rename_of_it_jpg_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+### ... OUTPUT ...
+
+mmand will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/"
+# Complete filename part: StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg
+# c#stitchTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/"
+# Complete filename part: FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg
+# c#reuseTrue
+  Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh | head
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg
+# c#reuseTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" >> failed_at_first_class_find.lst
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed -i.bak 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ history | tail -n 20
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_0}";
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' | tee -a rename_of_it_jpg_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+  614  ls *.sshh
+  615  vim rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+  616  sed 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh | head
+  617  sed -i.bak 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+  618  history | tail -n 20
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ history | tail -n 50
+"\{ echo \"#   success\"; "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst; \} || "\
+"\{ echo \"#   FAILURE\"; "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst; \}" | \
+  tee -a renaming_jpeg_to_last_0.sshh;
+' > creating_jpg_rename_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').out 2>&1
+  603  ls *.out
+  604  ls *.sshh
+  605  ls *.lst
+  606  ls *.out
+  607  ls *.sshh
+  608  ls *.lst
+  609  rm *.out
+  610  rm *.sshh
+  611  date
+  612  date +'%s'
+  613  this_ext="jpg" && find /cygdrive/d/Datasets_and_Models/P2_MSS   -type f -iname "*True.${this_ext}" -print0 |      xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_0=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_0}";
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "  Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' | tee -a rename_of_it_jpg_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+  614  ls *.sshh
+  615  vim rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+  616  sed 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh | head
+  617  sed -i.bak 's,[ ][ ]Command[ ]will[ ]be[:],#   Command will be,g' rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+  618  history | tail -n 20
+  619  history | tail -n 50
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 08:52:58 MST 2024
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707148382
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 35 rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+#!/usr/bin/env bash
+#
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg
+# c#reuseTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg
+# c#stitchTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg
+# c#stitchTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/"
+# Complete filename part: HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg
+# c#stitchTrue
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod +a rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+chmod: invalid mode: ‘+a’
+Try 'chmod --help' for more information.
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod a+x rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -maxdepth 1 -type f | wc -l
+123
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+ls: cannot access '*.out': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+ls: cannot access '*.lst': No such file or directory
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ./rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh 2>&1 | \
+tee renaming_jpg_to_last_0__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+
+#  Realized things were going to *.lst files, not to my *.out
+#+ as may be seen below
+
+#### /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg ####
+
+
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ tail -f renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find.lst  failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim after_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l after_first_class_find.lst
+655 after_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -23 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) |
+> wc -l
+624
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_first_class_find.lst
+155
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_first_class_find.lst
+655
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -13 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) | wc -l
+124
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -12 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) | wc -l
+31
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim failed_at_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_first_class_find.lst
+31
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_first_class_find.lst
+655
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim after_first_class_find.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -12 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) | wc -l
+31
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -13 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) | wc -l
+0
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ comm -23 <(sort after_first_class_find.lst) <(sort failed_at_first_class_find.lst) | wc -l
+624
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Only failed b/c I didn't realize stuff was going to these *.lst
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ files and not to *.out
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$ tail -n 1 after_first_class_find.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg
+
+bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+####
+#/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg
+####
+
+# finding that filename with vim
+
+### ... LOTS ...
+
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427_-_reusetinybgTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/"
+# Complete filename part: FamilySearch_-_DGS008104286_01427_-_reusetinybgTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427.jpg
+# c#reusetinybgTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427_-_reusetinybgTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427_-_reusetinybgTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008104286_01427.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/"
+# Complete filename part: FamilySearch_-_DGS008909919_00362_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg
+# c#stitchTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/FamilySearch_-_DGS008909919_00362.jpg" >> failed_at_first_class_find.lst
+
+
+
+
+
+
+
+##########################################
+## I think this was before the last stuff, but I want to check that I got all of these.
+
+$ bash rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh 2>&1 | tee renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0011_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0012_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/EngelbergStiftsbibliothek_-_AugustinusSermones_-_Cod16-AKA-MS16_fol11v-ecod_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/EngelbergStiftsbibliothek_-_AugustinusSermones_-_Cod16-AKA-MS16-fol11r-ecod_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006v_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_015r_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_015v_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_016r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_016v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_017v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_019r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006v_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_015r_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_015v_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_016r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_016v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_017v_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r_-_stitchTrue.jpg': No such file or directory
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v_-_stitchTrue.jpg': No such file or directory
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+###########################################
+
+
+
+# Stuff on 2024-02-05
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do line2find="${line}"; pass_to_sed_l2f=$(echo "${line2find}" | sed 's#/#\\/#g'); pass_to_sed_l2f="mv.*${pass_to_sed_l2f}"; echo "pass_to_sed_l2f: ${pass_to_sed_l2f}"; sed 's/^\('"${pass_to_sed_l2f}"'\).*$/#already_done# \1/g' "rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh" ; done < after_first_class_find.lst | head -n 30
+pass_to_sed_l2f: mv.*\/cygdrive\/d\/Datasets_and_Models\/P2_MSS\/toPutInCollectionFolders\/e-codices_fmb-cb-0059_184r_max.jpg
+#!/usr/bin/env bash
+#
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg
+# c#reuseTrue
+#   Command will be
+#already_done# mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg
+# c#stitchTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg" >> failed_at_first_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg
+# c#stitchTrue
+#   Command will be
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg" >> failed_at_first_class_find.lst
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cp "rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh" "rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.$(date +'%s_%Y-%m-%dT%H%M%S%z').bak"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cp "rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh" "rename_of_it_jpg_to_last_0.sh"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ time while read -r line; do line2find="${line}"; pass_to_sed_l2f=$(echo "${line2find}" | sed 's#/#\\/#g'); pass_to_sed_l2f="mv.*${pass_to_sed_l2f}"; sed -i 's/^\('"${pass_to_sed_l2f}"'\).*$/#already_done# \1/g' "rename_of_it_jpg_to_last_0.sh"; done < after_first_class_find.lst && mv "rename_of_it_jpg_to_last_0.sh"  "rename_of_it_jpg_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sh"                  
+real    1m55.428s
+user    0m16.257s
+sys     0m46.643s
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+

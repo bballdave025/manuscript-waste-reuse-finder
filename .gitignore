@@ -22,7 +22,7 @@ __pycache__/
 ~$*
 
 # My output file(s) to keep
-### none yet ###
+!img/some_bash_logs_for_images.log
 
 
 # The template from GitHub for a Python repo
@@ -86,7 +86,10 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
+## DWB 2024-02-05 Just commenting this next line out, so I
+##+               don't spend too much time figuring out why
+##+               my exception line is having problems.
+#*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

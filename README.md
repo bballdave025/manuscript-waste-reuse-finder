@@ -8,7 +8,7 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
-If you're impatient to know about the tool and the accompanying research, you can see my [submission for a Research Talk](./BLACK-David_-_FHTC_2024_-_Reused_Manuscript_Fragments.pdf) as a PDF, or you can use this [LINK FOR THE AFTER-IMAGE PART](#Tool-Description-for-the-Family-History-Technology-Workshop). There's also the option of looking at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
+If you're impatient to know about the tool and the accompanying research, you can see my <b>(2024-02-05) UPDATED</b> [submission for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-05.pdf) as a PDF, or you can use this [LINK FOR THE AFTER-IMAGE PART](#Tool-Description-for-the-Family-History-Technology-Workshop). There's also the option of looking at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
 
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
@@ -210,6 +210,6 @@ Manuscript fragments are, quite simply, pages or groups of pages which have hand
 
 Coming soon!
 
-For now, you're welcome to look at my [submission for a Research Talk](./BLACK-David_-_FHTC_2024_-_Reused_Manuscript_Fragments.pdf) as a PDF.
+For now, you're welcome to look at my <b>(2024-02-05) UPDATED</b> [submission for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-05.pdf) as a PDF.
 
 You're also welcome to have a look at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
