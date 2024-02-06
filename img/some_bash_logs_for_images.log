@@ -1149,17 +1149,18 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS \
 
 #spacing
 
-this_ext="jpg" && \
-find /cygdrive/d/Datasets_and_Models/P2_MSS \
-  -type f -not -iname "*True.${this_ext}" | wc -l
+#this_ext="jpg" && \
+#find /cygdrive/d/Datasets_and_Models/P2_MSS \
+#  -type f -not -iname "*True.${this_ext}" | wc -l
 
-this_ext="png" && \
-find /cygdrive/d/Datasets_and_Models/P2_MSS \
-  -type f -not -iname "*True.${this_ext}" | wc -l
+#this_ext="png" && \
+#find /cygdrive/d/Datasets_and_Models/P2_MSS \
+#  -type f -not -iname "*True.${this_ext}" | wc -l
 
 find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
   -not -iname "*True.jpg" -a -not -iname "*True.png" \
   -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
 
 ##########################
 ## FROM THIS TIME
@@ -1171,7 +1172,13 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS \
 136
 
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
-$ # from 770 down to 136 - good
+$ #  from 770 down to 136 - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ P.S. That means, of the 770 that had any class affix,
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ 136 also have a second class affix.
 
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ this_ext="png" && \
@@ -1320,6 +1327,384 @@ cp "rename_of_it_png_to_last_0_1707077619_2024-02-04T131339-0700.sh" "rename_of_
 while read -r line; do line2find="${line}"; pass_to_sed_l2f=$(echo "${line2find}" | sed 's#/#\\/#g'); pass_to_sed_l2f="mv.*${pass_to_sed_l2f}.*"; sed -i 's/^\('"${pass_to_sed_l2f}"'\)$/#already_done# \1/g' "rename_of_it_png_to_last_0.sh"; done < after_first_class_find.lst && mv "rename_of_it_png_to_last_0.sh"  "rename_of_it_png_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sh"
 
 
+###  What happens in the Cygwin Terminal
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:32:44 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707179567
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+ls: cannot access '*.out': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ##  Okay, we're going for 307 PNG files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="png";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_0=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_0}";
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' > rename_of_it_png_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < rename_of_it_
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh
+2763
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 30 rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: VatPaLat68_f15r_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: VatPaLat68_f15v_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/"
+# Complete filename part: VatPaLat68_f15r_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15v_detail_-_stitchTrue.png"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:40:01 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707180004
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 30 rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh
+#!/usr/bin/env bash
+#
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: VatPaLat68_f15r_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/"
+# Complete filename part: VatPaLat68_f15v_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/"
+# Complete filename part: VatPaLat68_f15r_detail_-_stitchTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png
+# c#stitchTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" >> after_first_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail_-_stitchTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png" >> failed_at_first_class_find.lst
+
+### Last class for PNG ###
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sshh rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod a+x rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:43:08 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707180191
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:43:08 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707180191
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ./rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh 2>&1 | tee renaming_png_to_last_0__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+
+
+## In other terminals
+# % tail -f after_first_class_find.lst
+#   AND
+# % tail -f failed_at_first_class_find.lst # if it gets created
+##
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707180635
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:50:37 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+#######################################################
+## REMEMBER FROM BEFORE
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  from 770 down to 136 - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ P.S. That means, of the 770 that had any class affix,
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ 136 also have a second class affix.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+307
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # same as before - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo "770-136" | bc
+634
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ### -v- DOES MEAN SOMETHING!!! -v- ###
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+27278
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Files might have been in the process of being converted.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ (rem. we had 26651 before)
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo "27278-26651" | bc
+627
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Well, the difference is close to 634,
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ and my thinker needs a rest.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+##
+#######################################################
+
+
+###################
+## THIS TIME
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 17:58:26 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707181109
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_1707180838_2024-02-05T175358-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Anything there would be an error, so that's a good thing to see.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+-bash: bballdave025@MY-MACHINE: command not found
+-bash: $: command not found
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+3
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  307 down to 3 - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ P.S. That means, of the 307 with one classification affix,
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ 3 of them have a second affix.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 18:03:28 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707181411
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+###################
 
 
 
@@ -1327,5 +1712,444 @@ while read -r line; do line2find="${line}"; pass_to_sed_l2f=$(echo "${line2find}
 
 
 
+
+
+###############################################################
+###############################################################
+#####
+##### NOW, FOR THE JPG FILES WITH A PENULTIMATE CLASSIFICATION
+#####
+###############################################################
+###############################################################
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+
+#spacing
+
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_1=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_1}";
+this_class=$(echo "${to_last_1}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_second_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_second_class_find.lst";
+' > rename_of_it_jpg_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+#! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
+
+
+# ./rename_of_it_jpg_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_jpg_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+## In other terminals
+# % tail -f after_second_class_find.lst
+#   AND
+# % tail -f failed_at_second_class_find.lst # if it gets created
+##
+
+
+wc -l < renaming_jpg_to_last_1__<tab-complete)
+
+wc -l < after_second_class_find.lst
+
+wc -l < failed_at_second_class_find.lst
+
+my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
+
+mv after_second_class_find.lst after_second_class_find_${my_timestamp}.lst
+
+mv failed_at_second_class_find.lst failed_at_second_class_find_${my_timestamp}.lst
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+#spacing
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+##  Comment and see the next steps
+
+
+
+
+###############################################################
+###############################################################
+#####
+##### NOW, FOR THE PNG FILES WITH A PENULTIMATE CLASSIFICATION
+#####
+###############################################################
+###############################################################
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+
+#spacing
+
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+
+# spacing
+
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="png";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_1=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_1}";
+this_class=$(echo "${to_last_1}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_second_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_second_class_find.lst";
+' > rename_of_it_png_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+#! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
+
+
+# ./rename_of_it_png_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+## In other terminals
+# % tail -f after_second_class_find.lst
+#   AND
+# % tail -f failed_at_second_class_find.lst # if it gets created
+##
+
+
+wc -l < renaming_png_to_last_1__<tab-complete)
+
+wc -l < after_second_class_find.lst
+
+wc -l < failed_at_second_class_find.lst
+
+my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
+
+mv after_second_class_find.lst after_second_class_find_${my_timestamp}.lst
+
+mv failed_at_second_class_find.lst failed_at_second_class_find_${my_timestamp}.lst
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+#spacing
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+##  Comment and see the next steps
+
+
+
+
+
+###############################################################
+###############################################################
+#####
+##### NOW, FOR THE JPG FILES WITH AN
+##### ANTI-PENULTIMATE CLASSIFICATION
+#####
+###############################################################
+###############################################################
+
+
+
+## CHANGE STUFF BELOW
+
+
+
+
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+
+#spacing
+
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_1=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_1}";
+this_class=$(echo "${to_last_1}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_second_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_second_class_find.lst";
+' > rename_of_it_jpg_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+#! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
+
+
+# ./rename_of_it_jpg_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_jpg_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+## In other terminals
+# % tail -f after_second_class_find.lst
+#   AND
+# % tail -f failed_at_second_class_find.lst # if it gets created
+##
+
+
+wc -l < renaming_jpg_to_last_1__<tab-complete)
+
+wc -l < after_second_class_find.lst
+
+wc -l < failed_at_second_class_find.lst
+
+my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
+
+mv after_second_class_find.lst after_second_class_find_${my_timestamp}.lst
+
+mv failed_at_second_class_find.lst failed_at_second_class_find_${my_timestamp}.lst
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+
+
+# spacing
+
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+
+#spacing
+
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+
+##  Comment and see the next steps
 
 
