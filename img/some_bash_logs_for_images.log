@@ -428,7 +428,8 @@ find: paths must precede expression: `iname'
 0
 
 bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
-$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f -not -iname "*True.jpg" -a -not -iname "*True.png" -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l26651
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f -not -iname "*True.jpg" -a -not -iname "*True.png" -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+26651
 
 bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
 $
@@ -947,4 +948,384 @@ sys     0m46.643s
 
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################
+#####################################################################
+#######
+#######
+##
+##  Let's do it with the PNG files, this time it should be quicker.
+##+ Then, we'll go back to look for files that had a second (or
+##+ even third) classification.
+##
+#######
+#######
+#####################################################################
+#####################################################################
+
+
+##  Steps should be (after doing some renames found by the
+##+ first few commands)
+
+
+date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak 
+
+#  finds and renames (add same timestamp as that on the file)
+#+ Look for the file you backed up. See what I do below.
+#+ make sure for  after_first_class_find.lst  and 
+#+ failed_at_first_class_find.lst
+##############################################################
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Mon Feb  5 16:33:30 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707176016
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find.lst  failed_at_first_class_find.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+ls: cannot access '*.out': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  this is important for renaming the *.lst files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  here's what we'll use
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ my_timestamp="1707151192_2024-02-05T093952-0700"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_first_class_find.lst after_first_class_find_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+655
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_at_first_class_find.lst failed_at_first_class_find_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+31
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  the 31 are those from where I thought I hadn't run it, but had
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ It couldn't find the files (they'd already been moved), so
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ it threw an error. I'm going to keep them to check
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cp failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ >failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+0 failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+31 failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+##############################################################
+
+###############################
+## REMEBER FROM BEFORE
+#
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ date
+#Sun Feb  4 13:03:15 MST 2024
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ date +'%s_%Y-%m-%dT%H%M%S%z'
+#1707077021_2024-02-04T130341-0700
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ ls *.lst
+#ls: cannot access '*.lst': No such file or directory
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ ls *.out
+#ls: cannot access '*.out': No such file or directory
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ ls *.sshh
+#ls: cannot access '*.sshh': No such file or directory
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ this_ext="jpg" && \
+#find /cygdrive/d/Datasets_and_Models/P2_MSS \
+#  -type f -iname "*True.${this_ext}" | wc -l
+#770
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ this_ext="png" && \
+#find /cygdrive/d/Datasets_and_Models/P2_MSS \
+#  -type f -iname "*True.${this_ext}" | wc -l
+#307
+#
+#
+#
+#bballdave025@gmail.com /cygdrive/d/Datasets_and_Models/P2_MSS
+#$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+#  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+#  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+#26651
+#
+#
+##
+###############################
+
+
+
+#spacing
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+#spacing
+
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+
+##########################
+## FROM THIS TIME
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # from 770 down to 136 - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+307
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # same as before - good
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo "770-136" | bc
+634
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # -v- Doesn't really mean anything
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+28347
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # -^- Doesn't really mean anything
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # -v- Doesn't really mean anything
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -not -iname "*True.${this_ext}" | wc -l
+28176
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # -^- Doesn't really mean anything
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ### -v- DOES MEAN SOMETHING!!! -v- ###
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+27278
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Files might have been in the process of being converted.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ (rem. we had 26651 before)
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo "27278-26651" | bc
+627
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Well, the difference is close to 634,
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ and my thinker needs a rest.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+##
+##########################
+
+
+
+
+
+
+
+# spacing
+
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 | 
+    xargs -I'{}' -0 bash -c '
+orig="{}"; 
+this_ext="png";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo; 
+echo "### Last class for ${this_ext_up} ###"; 
+echo "# Original Full Path: \"${orig}\""; 
+to_last_0=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"'); 
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"'); 
+echo "# Directory containing file: \"${dir_w_file}\""; 
+echo "# Complete filename part: ${to_last_0}"; 
+this_class=$(echo "${to_last_0}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"'); 
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"'); 
+echo "# New filename ${new_fname}"; 
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_first_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_first_class_find.lst";
+' > rename_of_it_png_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+#! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
+
+
+
+##  If there are any problems (e.g. you run part of it and press
+##+ [Ctrl]+[C] when you think it isn't working, but it turns out
+##+ that it _was_ working) ...
+#
+## Get just the new filenames in  after_first_class_find.lst
+#
+#
+#  Example copy (date string will be different, and [this time]
+#+ we'll use 'png' instead of 'jpg' as well as [this time] the
+#+ '_to_last_0'. The finding of a penultimate class will have
+#+ '_to_last_1'. I just realized that the time is backwards
+#+ [our '_to_last_0', i.e. '0th to last' is the first one done.
+#+  and the next will become the '_to_last_1', i.e. 1st to
+#+  last. I guess if by 'last' you mean 'at the end of the
+#+  filename, it could be called, at least, close.] After
+#+ finding the penultimate, it will probably be necessary to
+#+ just look at each filename with 'True' in it.)
+
+cp "rename_of_it_png_to_last_0_1707077619_2024-02-04T131339-0700.sh" "rename_of_it_png_to_last_0_1707077619_2024-02-04T131339-0700.sh.$(date +'%s_%Y-%m-%dT%H%M%S%z').bak"
+
+
+#  Again, the 'jpg' will change to 'png', and the timestamp will
+#+ be different. For this one, we'll use '_to_last_0', and we'll
+#+ use '_to_last_1' for the next class-finding.
+
+cp "rename_of_it_png_to_last_0_1707077619_2024-02-04T131339-0700.sh" "rename_of_it_png_to_last_0.sh"
+
+
+#  Then, with the up-to-date filenames
+
+while read -r line; do line2find="${line}"; pass_to_sed_l2f=$(echo "${line2find}" | sed 's#/#\\/#g'); pass_to_sed_l2f="mv.*${pass_to_sed_l2f}.*"; sed -i 's/^\('"${pass_to_sed_l2f}"'\)$/#already_done# \1/g' "rename_of_it_png_to_last_0.sh"; done < after_first_class_find.lst && mv "rename_of_it_png_to_last_0.sh"  "rename_of_it_png_to_last_0_$(date +'%s_%Y-%m-%dT%H%M%S%z').sh"
+
+
+
+
+
+
+
+
+
+
 
