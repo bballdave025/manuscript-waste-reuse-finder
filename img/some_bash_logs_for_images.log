@@ -1855,6 +1855,732 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
 ##  Comment and see the next steps
 
 
+###--------------------------------------------
+# In the Cygwin Terminal
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ##  Going for 136 JPG files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+date +'%s'
+ls *.lst
+# sometimes
+# rm *.lst
+# OR
+# rm <somelist>.lst
+# also *.out and *.sshh and *.sh and *.bak
+ls *.out
+ls *.sshh
+ls *.sh
+ls *.bak
+Mon Feb  5 18:42:14 MST 2024
+1707183734
+after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_1707180838_2024-02-05T175358-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+ls: cannot access '*.sshh': No such file or directory
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+
+this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+136
+3
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+27581
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_1=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_1}";
+this_class=$(echo "${to_last_1}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_second_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_second_class_find.lst";
+' > rename_of_it_jpg_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshhthis_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" -print0 |
+    xargs -I'{}' -0 bash -c '
+orig="{}";
+this_ext="jpg";
+this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
+echo;
+echo "### Last class for ${this_ext_up} ###";
+echo "# Original Full Path: \"${orig}\"";
+to_last_1=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
+dir_w_file=$(echo "${orig}" | \
+  awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
+echo "# Directory containing file: \"${dir_w_file}\"";
+echo "# Complete filename part: ${to_last_1}";
+this_class=$(echo "${to_last_1}" | \
+  sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
+new_fname=$(echo "${orig}" | \
+  sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
+echo "# New filename ${new_fname}";
+echo "# c#${this_class}";
+echo "#   Command will be:"
+echo "mv \"${orig}\"  \"${new_fname}\" && "\
+"echo \"${new_fname}\" >> "\
+"after_second_class_find.lst || "\
+"echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
+"failed_at_second_class_find.lst";
+' > rename_of_it_jpg_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < rename_of_it_jpg_to_last_1_17071838
+rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext=jpg
+rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg
+1224 rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext=jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh
+1224
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ diff rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> failed_at_second_class_find.lst
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshh
+head: cannot open 'rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshh' for reading: No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh        
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> failed_at_second_class_find.lst
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ tail rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> failed_at_second_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/"
+# Complete filename part: FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> failed_at_second_class_find.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ tail rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116_-_stitchTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg" >> failed_at_second_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/"
+# Complete filename part: FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg" >> failed_at_second_class_find.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm rename_of_it_jpg_to_last_1_17071838
+rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext=jpg
+rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm rename_of_it_jpg_to_last_1_1707183828_2024-02-05T184348-0700.sshhthis_ext\=jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep ^mv rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh | wc -l
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  That's the number we wanted
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  back again (the timestamp on the *.sshh files above is close to
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ when I ended.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sshh rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 15 rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> failed_at_second_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+# Complete filename part: FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01431.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 15 rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+#!/usr/bin/env bash
+
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg
+# c#reuseTrue
+#   Command will be:
+mv "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"  "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> after_second_class_find.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg" >> failed_at_second_class_find.lst
+
+### Last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Oh, I didn't do the date above
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Tue Feb  6 13:28:17 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707251301
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod a+x rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Tue Feb  6 13:36:08 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s' && time ./rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh 2>&1 | tee renaming_jpg_to_last_1__renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out && date +'%s'
+1707251805
+
+real    0m10.029s
+user    0m0.851s
+sys     0m4.399s
+1707251815
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head after_second_class_find.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01370.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01431.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/FamilySearch_-_DGS008104286/FamilySearch_-_DGS008104286_01432.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/FamilySearch_-_DGS008104286_01370.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/FamilySearch_-_DGS008104286_01431.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/FamilySearch_-_DGS008104286_01432.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/FamilySearch_-_DGS008104286_01432.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/FamilySearch_-_DGS008104286_01370.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/FamilySearch_-_DGS008104286_01431.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Yes_Reuse/yes_for_training/FamilySearch_-_DGS008104286_01370.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ tail after_second_class_find.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1910_00060.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1910_00069.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1911_00064.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1911_00080.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1911_00081.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1911_00082.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00083.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00115.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/StGallenStiftsbib_-_CodSang783-ecod_00116.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/FamilySearch_-_DGS008863314_00223.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_second_class_find.lst
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # That's the number we wanted.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ stat failed_at_second_class_find.lst
+stat: cannot stat 'failed_at_second_class_find.lst': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch failed_at_second_class_find.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_second_class_find.lst
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < renaming_jpg_to_last_1__renaming_png_to_last_1__1707251805_2024-02-06T133645-0700.out
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Good. That file would only have gotten errors (which would have
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ also showed up here in the terminal.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo $this_ext
+jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_second_class_find.lst after_second_class_find_${this_ext}_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_at_second_class_find.lst failed_at_second_class_find_${this_ext}_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Tue Feb  6 13:42:43 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707252229
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_1707180838_2024-02-05T175358-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_jpg_to_last_1__renaming_png_to_last_1__1707251805_2024-02-06T133645-0700.out
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv renaming_jpg_to_last_1__1707251805_2024-02-06T133645-0700.out              mv: missing destination file operand after 'renaming_jpg_to_last_1__1707251805_2024-02-06T133645-0700.out'
+Try 'mv --help' for more information.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Oh, yeah, have to leave the original. I'm guessing I pasted too much
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv renaming_jpg_to_last_1__renaming_png_to_last_1__1707251805_2024-02-06T133645-0700.out renaming_jpg_to_last_1__1707251805_2024-02-06T133645-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_jpg_to_last_1__1707251805_2024-02-06T133645-0700.out
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+3
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # From 136 to 3 - nice
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && find /cygdrive/d/Datasets_and_Models/P2_MSS -type f -iname "*True.${this_ext}"
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432_-_reuseTrue.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+3
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && find /cygdrive/d/Datasets_and_Models/P2_MSS -type f -iname "*True.${this_ext}"
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370_-_reuseTrue.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+##  REALIZED THAT I SHOULD HAVE "### Second-to-last class for JPG ###"
+##+ INSTEAD OF LEAVING "### Last class for JPG ###"
+##+ in  rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+##
+##+ Hooray for   sed -i.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed -i.bak 's,^[#]\{3\}[ ]Last[ ]class[ ]for[ ]JPG[ ][#]\{3\},### Second-to-last class for JPG ###,g;'
+sed: no input files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed -i.bak 's,^[#]\{3\}[ ]Last[ ]class[ ]for[ ]JPG[ ][#]\{3\},### Second-to-last class for JPG ###,g;' rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "Last class for JPG" rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "Second-to-last class for JPG" rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh | wc -l
+136
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Awesome!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+
+##--------------------------------------------
+#  Seems overkill to run those whole big 
+#+ things when I can do 6 renames that are
+#+ quite easy. The ones below actually have
+#+ all the stuff, so I'll leave them in as
+#+ NICE BUT UNNECESSARY (THIS TIME)
+#+ It'll be at the bottom.
+##--------------------------------------------
+
+
+##-------------------------------------------
+#  Actually entered in. Wait, I can easily
+#+ recreate the same sort of file, so we
+#+ have all old/new (i.e. classification
+#+ affixes before removed) info.
+#
+#+ (Noticing the "Last" vs. 
+#+ "Second-to-last" thing I fixed above.
+##-------------------------------------------
+
+
+We'll have a file, which we can copy/paste from here into vim
+
+
+#====================FILE-STARTS-ON-NEXT-LINE====================#
+#!/usr/bin/env bash
+
+# Manually created about 1707256841_2024-02-06T150041-0700
+
+
+
+### Third-to-last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370.jpg
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370.jpg  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370.jpg" >> after_third_class_find_jpg.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01370.jpg" >> failed_at_third_class_find_jpg.lst
+
+
+
+### Third-to-last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/"
+# Complete filename part: FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431.jpg
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431.jpg  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431.jpg" >> after_third_class_find_jpg.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431_-_reuseTrue.jpg\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01431.jpg" >> failed_at_third_class_find_jpg.lst
+
+
+
+### Third-to-last class for JPG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432_-_reuseTrue.jpg"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/"
+# Complete filename part: FamilySearch_-_DGS008104286_01432_-_reuseTrue.jpg
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432.jpg
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432_-_reuseTrue.jpg /cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432.jpg  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432.jpg" >> after_third_class_find_jpg.lst || echo -e "\n Old:\n#!#OLD#!#\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_FSGray__ORIG/FamilySearch_-_DGS008104286_01432.jpg" >> failed_at_third_class_find_jpg.lst
+
+
+
+
+
+
+### Second-to-last class for PNG ###
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370_-_reuseTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/"
+# Complete filename part: FamilySearch_-_DGS008104286_01370_-_reuseTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370.png
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370.png  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370.png" >> after_second_class_find_png.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370_-_reuseTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370.png" >> failed_at_second_class_find_png.lst
+
+
+
+### Second-to-last class for PNG ###
+# Original Full Path: "#!#OLD#!#"
+# Directory containing file: "#!#DIR#!#"
+# Complete filename part: #!#FNAME#!#
+# New filename #!#NEW#!#
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png  && echo "#!#NEW#!#" >> after_second_class_find_png.lst || echo -e "\n Old:\n#!#OLD#!#\n New:\n#!#NEW#!#" >> failed_at_second_class_find_png.lst
+
+
+### Second-to-last class for PNG ###
+# Original Full Path: "#!#OLD#!#"
+# Directory containing file: "#!#DIR#!#"
+# Complete filename part: #!#FNAME#!#
+# New filename #!#NEW#!#
+# c#reuseTrue
+#   Command will be:
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png  && echo "#!#NEW#!#" >> after_second_class_find_png.lst || echo -e "\n Old:\n#!#OLD#!#\n New:\n#!#NEW#!#" >> failed_at_second_class_find_png.lst
+
+
+#===================FILE-ENDED-ON-PREVIOUS-LINE==================#
+
+
+
+#####################################################
+#####################################################
+##  Manually looking for "True", "False", "reuse",
+##+ "stitching", "hole", "damage", ...
+##+ Luckily, I did a search for "*True*" through
+##+ the whole part of my backup drive with
+##+ Databases and Models, and I noticed there there
+##+ is a Truebner collection from somewhere.
+##+ There is definitely 'codtruebner36a' in some
+##+ filenames, and I think I saw the name at the
+##+ beginning of a file. We'll need to be careful.
+##+ Well, I'll need to be careful.
+#####################################################
+#####################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<## 
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<##
+##>>#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#
+##########
+########## BEGIN:  NICE BUT UNNECESSARY (THIS TIME)
+##########
+##>>#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<## 
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<##
+
+
+
 
 
 ###############################################################
@@ -1883,18 +2609,16 @@ ls *.bak
 # spacing
 
 
-this_ext="jpg" && \
-find /cygdrive/d/Datasets_and_Models/P2_MSS \
-  -type f -iname "*True.${this_ext}" | wc -l
-
 this_ext="png" && \
 find /cygdrive/d/Datasets_and_Models/P2_MSS \
   -type f -iname "*True.${this_ext}" | wc -l
 
+this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
 
 
 #spacing
-
 
 
 find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
@@ -1902,8 +2626,8 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
   -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
 
 
-
 # spacing
+
 
 
 this_ext="png" && \
@@ -1939,8 +2663,9 @@ echo "mv \"${orig}\"  \"${new_fname}\" && "\
 #! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
 
 
-# ./rename_of_it_png_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+# date +'%s' && time ./rename_of_it_png_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 | tee renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
 
+# #actual filename# ''
 
 ## In other terminals
 # % tail -f after_second_class_find.lst
@@ -1949,17 +2674,24 @@ echo "mv \"${orig}\"  \"${new_fname}\" && "\
 ##
 
 
-wc -l < renaming_png_to_last_1__<tab-complete)
+wc -l < renaming_png_to_last_1__<tab-complete>
+
+#  Zero ('0') is preferred. That file would 
+#+ have only gotten errors (which would have
+#+ also showed up here in the terminal.)
+
 
 wc -l < after_second_class_find.lst
 
 wc -l < failed_at_second_class_find.lst
 
+echo "${this_ext}" ## to double-check
+
 my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
 
-mv after_second_class_find.lst after_second_class_find_${my_timestamp}.lst
+mv after_second_class_find.lst after_second_class_find_${this_ext}_${my_timestamp}.lst
 
-mv failed_at_second_class_find.lst failed_at_second_class_find_${my_timestamp}.lst
+mv failed_at_second_class_find.lst failed_at_second_class_find_${this_ext}_${my_timestamp}.lst
 
 
 date
@@ -1979,11 +2711,11 @@ ls *.bak
 # spacing
 
 
-this_ext="jpg" && \
+this_ext="png" && \
 find /cygdrive/d/Datasets_and_Models/P2_MSS \
   -type f -iname "*True.${this_ext}" | wc -l
 
-this_ext="png" && \
+this_ext="jpg" && \
 find /cygdrive/d/Datasets_and_Models/P2_MSS \
   -type f -iname "*True.${this_ext}" | wc -l
 
@@ -1998,6 +2730,9 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
 
 ##  Comment and see the next steps
 
+
+###--------------------------------------------
+# In the Cygwin Terminal
 
 
 
@@ -2070,13 +2805,13 @@ this_ext_up=$(echo "${this_ext}" | tr "[a-z]" "[A-Z]");
 echo;
 echo "### Last class for ${this_ext_up} ###";
 echo "# Original Full Path: \"${orig}\"";
-to_last_1=$(echo "${orig}" | \
+to_last_2=$(echo "${orig}" | \
   awk -F'"'"'/'"'"' '"'"'{print $NF}'"'"' OFS='"'"'/'"'"');
 dir_w_file=$(echo "${orig}" | \
   awk -F'"'"'/'"'"' '"'"'{$(NF--)=""; print}'"'"' OFS='"'"'/'"'"');
 echo "# Directory containing file: \"${dir_w_file}\"";
-echo "# Complete filename part: ${to_last_1}";
-this_class=$(echo "${to_last_1}" | \
+echo "# Complete filename part: ${to_last_2}";
+this_class=$(echo "${to_last_2}" | \
   sed '"'"'s#^.*[_-]\([^_-]\+True\)[.]'"'"'"${this_ext}"'"'"'$#\1#g'"'"');
 new_fname=$(echo "${orig}" | \
   sed '"'"'s#^\(.*[^_-]\)[_-]\+'"'"'"${this_class}"'"'"'\([.]'"'"'"${this_ext}"'"'"'\)#\1\2#g'"'"');
@@ -2088,12 +2823,12 @@ echo "mv \"${orig}\"  \"${new_fname}\" && "\
 "after_second_class_find.lst || "\
 "echo -e \"\n Old:\n${orig}\n New:\n${new_fname}\" >> "\
 "failed_at_second_class_find.lst";
-' > rename_of_it_jpg_to_last_1_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+' > rename_of_it_jpg_to_last_2_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
 
 #! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
 
 
-# ./rename_of_it_jpg_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_jpg_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+# ./rename_of_it_jpg_to_last_2_<whatever-it-is-with-timestamp>.sh 2>&1 renaming_jpg_to_last_2__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
 
 
 ## In other terminals
@@ -2103,7 +2838,7 @@ echo "mv \"${orig}\"  \"${new_fname}\" && "\
 ##
 
 
-wc -l < renaming_jpg_to_last_1__<tab-complete)
+wc -l < renaming_jpg_to_last_2__<tab-complete)
 
 wc -l < after_second_class_find.lst
 
@@ -2151,5 +2886,28 @@ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
 
 
 ##  Comment and see the next steps
+
+
+###--------------------------------------------
+# In the Cygwin Terminal
+
+
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<## 
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<##
+##>>#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#
+##########
+########## ENDOF:  NICE BUT UNNECESSARY (THIS TIME)
+##########
+##>>#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<## 
+##>> -*-*-*-*-*-*-* #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@# -*-*-*-*-*-*-* <<##
+
+
+
+
+
+
+
+
 
 
