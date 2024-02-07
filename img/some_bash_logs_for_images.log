@@ -2343,6 +2343,418 @@ $ #  Awesome!
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $
 
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh           
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch rename_of_it_manual__jpg_to_last_3__png_to_last_2_$(date +'%s_%Y-%m-%dT%H%M%S%z').sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep ^mv rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sshh | wc -l
+6
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sshh rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod a+x rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s' && time ./rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sh | tee renaming_manual__jpg_to_last_3__png_to_last_2_$(date +'%s_%Y-%m-%dT%H%M%S%z').out && date +'%s'
+1707258255
+mv: missing destination file operand after '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png'
+Try 'mv --help' for more information.
+./rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sh: line 73: /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png: No such file or directory
+
+real    0m0.814s
+user    0m0.061s
+sys     0m0.290s
+1707258256
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < renaming_manual__jpg_to_last_3__png_to_last_2_1707258255_2024-02-06T152415-0700.out
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Oops, didn't have a  2>&1, but I can just copy/paste the errors.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim renaming_manual__jpg_to_last_3__png_to_last_2_1707258255_2024-02-06T152415-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < renaming_manual__jpg_to_last_3__png_to_last_2_1707258255_2024-02-06T152415-0700.out
+3
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ stat /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+  File: /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+  Size: 5117470         Blocks: 5120       IO Block: 65536  regular file
+Device: 5d9726h/6133542d        Inode: 9318439026095541211  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (197609/   bballdave025)   Gid: (197609/   bballdave025)
+Access: 2024-01-28 21:11:32.000000000 -0700
+Modify: 2024-01-25 18:02:24.000000000 -0700
+Change: 2024-01-25 18:02:24.000000000 -0700
+ Birth: 2024-01-28 21:11:32.370000000 -0700
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_second_class_find_
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_second_class_find_png.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < after_second_class_find_png.lst
+2
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < failed_at_second_class_find_png.lst
+5
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ my_timestamp=$(date +'%s_%Y-%m-%dT%H%M%S%z')
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_second_class_find_png.lst after_manual__3rd_cls_jpg__2nd_cls_png_find_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_at_second_class_find_png.lst failed_manual_at__3rd_cls_jpg__2nd_cls_png_find_${my_timestamp}.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head failed_at_first_class_find_
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # empty
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls after*.lst
+after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_1707180838_2024-02-05T175358-0700.lst
+after_manual__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_third_class_find_jpg.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head after_first_class_find_1707151192_2024-02-05T093952-0700.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/e-codices_fmb-cb-0059_184r_max.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0019_8r.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/StaatsbibliothekBamberg_-_Msc.Patr.5_0020_8v.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0009.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0010.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0011.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/Hochschul-und-Landesbibliothek-Fulda/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257/HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_0012.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/EngelbergStiftsbibliothek_-_AugustinusSermones_-_Cod16-AKA-MS16_fol11v-ecod.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/EngelbergStiftsbibliothek_-_AugustinusSermones_-_Cod16-AKA-MS16-fol11r-ecod.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/AargauerKantonsBibliothek/AargauerKantonsbibliothek_-_MsWettF9/CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_first_class_find_1707151192_2024-02-05T093952-0700.lst after_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_at_first_class_find_1707151192_2024-02-05T093952-0700.lst failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head after_first_class_find_1707180838_2024-02-05T175358-0700.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15r_detail.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/VatPaLat68_f15v_detail.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15r_detail.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/VatPaLat68_f15v_detail.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_Completed_MS_img_downloads/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_002_1057pastedown.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_Completed_MS_img_downloads/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_003_1057first.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Heidelberg_-_salVII73/Heidelberg_-_salVII73__z4_00001.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Heidelberg_-_salVII73/Heidelberg_-_salVII73__z4_00002.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Heidelberg_-_salVII73/Heidelberg_-_salVII73__z4_00247.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Heidelberg_-_salVII73/Heidelberg_-_salVII73__z4_00248.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_first_class_find_1707180838_2024-02-05T175358-0700.lst after_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_at_first_class_find_1707180838_2024-02-05T175358-0700.lst failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+after_manual__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_third_class_find_jpg.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_manual_at__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # that manual stuff for the after... and failed... weren't needed
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat failed_manual_at__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst
+
+ Old:
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+ New:
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv failed_manual_at__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch failed_at_
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch failed_at_
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch failed_at_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat after_manual__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01370.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_manual__3rd_cls_jpg__2nd_cls_png_find_1707258758_2024-02-06T153238-0700.lst after_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv after_third_class_find_jpg.lst after_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+after_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # I think I already did this, but ...
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
+mv: cannot stat '/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ stat /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
+  File: /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
+  Size: 5117470         Blocks: 5120       IO Block: 65536  regular file
+Device: 5d9726h/6133542d        Inode: 9960815197659962474  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (197609/   bballdave025)   Gid: (197609/   bballdave025)
+Access: 2024-01-28 21:11:32.000000000 -0700
+Modify: 2024-01-25 18:02:24.000000000 -0700
+Change: 2024-01-25 18:02:24.000000000 -0700
+ Birth: 2024-01-28 21:11:32.370000000 -0700
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png" > after_second_class_find_png_manual_try2_$(date +'%S_%Y-%m-%dT%H%M%S%z').lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #touch failed_at_second_class_find_png_manual_try2_
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+after_second_class_find_png_manual_try2_07_2024-02-06T154807-0700.lst
+after_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ touch failed_at_second_class_find_png_manual_try2_07_2024-02-06T154807-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Tue Feb  6 15:50:11 MST 2024
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707259820
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.lst
+after_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+after_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+after_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+after_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+after_second_class_find_png_manual_try2_07_2024-02-06T154807-0700.lst
+after_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_first_class_find_-_error-between-keyboard-and-chair_-_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_jpg_1707151192_2024-02-05T093952-0700.lst
+failed_at_first_class_find_png_1707180838_2024-02-05T175358-0700.lst
+failed_at_second_class_find_jpg_1707252064_2024-02-06T134104-0700.lst
+failed_at_second_class_find_png_manual_1707258758_2024-02-06T153238-0700.lst
+failed_at_second_class_find_png_manual_try2_07_2024-02-06T154807-0700.lst
+failed_at_third_class_find_jpg_manual_1707258758_2024-02-06T153238-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.out
+renaming_jpg_to_last_1__1707251805_2024-02-06T133645-0700.out
+renaming_manual__jpg_to_last_3__png_to_last_2_1707258255_2024-02-06T152415-0700.out
+renaming_png_to_last_0__1707180508_2024-02-05T174828-0700.out
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sshh
+ls: cannot access '*.sshh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.sh
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+rename_of_it_jpg_to_last_0_1707173527_2024-02-05T155207-0700.sh
+rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh
+rename_of_it_manual__jpg_to_last_3__png_to_last_2_1707257968_2024-02-06T151928-0700.sh
+rename_of_it_png_to_last_0_1707179796_2024-02-05T173636-0700.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls *.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh.1707151192_2024-02-05T093952-0700.bak
+rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sshh.bak
+rename_of_it_jpg_to_last_1_1707183860_2024-02-05T184420-0700.sh.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="jpg" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Nice!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ this_ext="png" && \
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f -iname "*True.${this_ext}" | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Nice again!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f \
+  -not -iname "*True.jpg" -a -not -iname "*True.png" \
+  -a \( -iname "*.jpg" -o -iname "*.png" \) | wc -l
+27719
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f   -not -iname "*True.jpg" -a -not -iname "*True.png"   -a \( -iname "*.jpg" -o -iname "*.png" \) | awk -F'/' '{print $NF}' | sort | uniq -c > unique_fnames_after_xing_classes.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < unique_fnames_after_xing_classes.lst
+20042
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  So we have 20042 _unique_ image files (or at least filenames),
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ but our duplicates (and extra images from Pinterest and for the
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ presentations and from other research and ...) push us to
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ having 27719 image files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
 
 
 ##--------------------------------------------
@@ -2424,28 +2836,41 @@ mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output
 
 
 ### Second-to-last class for PNG ###
-# Original Full Path: "#!#OLD#!#"
-# Directory containing file: "#!#DIR#!#"
-# Complete filename part: #!#FNAME#!#
-# New filename #!#NEW#!#
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/g"
+# Complete filename part: FamilySearch_-_DGS008104286_01431_-_reuseTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png
 # c#reuseTrue
 #   Command will be:
-mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png  && echo "#!#NEW#!#" >> after_second_class_find_png.lst || echo -e "\n Old:\n#!#OLD#!#\n New:\n#!#NEW#!#" >> failed_at_second_class_find_png.lst
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png" >> after_second_class_find_png.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431_-_reuseTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01431.png" >> failed_at_second_class_find_png.lst
 
 
 ### Second-to-last class for PNG ###
-# Original Full Path: "#!#OLD#!#"
-# Directory containing file: "#!#DIR#!#"
-# Complete filename part: #!#FNAME#!#
-# New filename #!#NEW#!#
+# Original Full Path: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png"
+# Directory containing file: "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/"
+# Complete filename part: FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
+# New filename /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png
 # c#reuseTrue
 #   Command will be:
 mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png
-/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png  && echo "#!#NEW#!#" >> after_second_class_find_png.lst || echo -e "\n Old:\n#!#OLD#!#\n New:\n#!#NEW#!#" >> failed_at_second_class_find_png.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png  && echo "/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png" >> after_second_class_find_png.lst || echo -e "\n Old:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432_-_reuseTrue.png\n New:\n/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/FamilySearch_-_DGS008104286_01432.png" >> failed_at_second_class_find_png.lst
 
 
 #===================FILE-ENDED-ON-PREVIOUS-LINE==================#
 
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS/ -type f   -not -iname "*True.jpg" -a -not -iname "*True.png"   -a \( -iname "*.jpg" -o -iname "*.png" \) | awk -F'/' '{print $NF}' | sort -u > possible_fnames_to_classify.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  I'll do some manual stuff on 'possible fnames to classify'. I'll also
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ look at any classifications that might be hidden inside the filenames.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
 
 
 #####################################################
@@ -2464,23 +2889,880 @@ mv /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output
 #####################################################
 
 
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  I'll do some manual stuff on 'possible fnames to classify'. I'll also
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ look at any classifications that might be hidden inside the filenames.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg | sed 's#^.*[_.-]\([^_.-]\+true[^_.-]*\).*$#\1#g' | head
+> ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]\+true[^_.-]*\).*$#\1#g' | head
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_01_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_02_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_03_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_04_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_TRUESSON-Reinhard_Saxtorp_Malmohus_Sverige_Sweden_seems_parchment.jpg
+./DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+./DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]\+true[^_.-]*\)[_.-].*$#\1#g' | head
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+./toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_01_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_02_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_03_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_04_Sweden_Kristianstad_reuseTrue_inside.jpg
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_TRUESSON-Reinhard_Saxtorp_Malmohus_Sverige_Sweden_seems_parchment.jpg
+./DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+./DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]\+true[^_.-]*\)[_.-].*$#\1#gi' | head
+embroideryTrue
+embroideryTrue
+embroideryTrue
+reuseTrue
+reuseTrue
+reuseTrue
+reuseTrue
+./toPutInCollectionFolders/FamilySearch_to_Organize/FS_TRUESSON-Reinhard_Saxtorp_Malmohus_Sverige_Sweden_seems_parchment.jpg
+embroideryTrue
+embroideryTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]*true[^_.-]*\)[_.-].*$#\1#gi' | head
+embroideryTrue
+embroideryTrue
+embroideryTrue
+reuseTrue
+reuseTrue
+reuseTrue
+reuseTrue
+TRUESSON
+embroideryTrue
+embroideryTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]*true[^_.-]*\)[_.-].*$#\1#gi' | sort | uniq -c > other_classes_inside_with_count.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find . -type f -iname "*true*.png" -o -iname "*true*.jpg" | sed 's#^.*[_.-]\([^_.-]*true[^_.-]*\)[_.-].*$#\1#gi' | sort -u > other_classes_inside.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < other_classes_inside.lst
+11
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l < other_classes_inside_with_count.lst
+11
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside.lst
+TRUESSON
+codtruebner112
+codtruebner147
+codtruebner21
+codtruebner26
+embroideryTrue
+marginalbmdTrue
+reuseTrue
+reuseTrue
+reusebehindTrue
+stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_with_count.lst
+      2 TRUESSON
+    329 codtruebner112
+    359 codtruebner147
+    311 codtruebner21
+    581 codtruebner26
+      6 embroideryTrue
+     18 marginalbmdTrue
+     11 reuseTrue
+     22 reuseTrue
+     12 reusebehindTrue
+      2 stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ 
+
+#########################
+## SOME LEARNING OF UNEXPECTED BEHAVIOR.
+## TL;DR is that the last filenames are the good ones.
+#########################
+
+
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # The one with 22 reuseTrue is 'reuseTrue '
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Let's make it easier to see
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_class="${line}"; echo "\'${this_class}\'"; done < other_classes_inside.lst #!! WRONG !!
+\'TRUESSON\'
+\'codtruebner112\'
+\'codtruebner147\'
+\'codtruebner21\'
+\'codtruebner26\'
+\'embroideryTrue\'
+\'marginalbmdTrue\'
+\'reuseTrue\'
+\'reuseTrue\'
+\'reusebehindTrue\'
+\'stitchTrue\'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_class="${line}"; echo "'${this_class}'"; done < other_classes_inside.lst #!! WRONG !!
+'TRUESSON'
+'codtruebner112'
+'codtruebner147'
+'codtruebner21'
+'codtruebner26'
+'embroideryTrue'
+'marginalbmdTrue'
+'reuseTrue'
+'reuseTrue'
+'reusebehindTrue'
+'stitchTrue'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_class="${line}"; echo "\"${this_class}\"" >> tmpf; done < other_classes_inside.lst #!! WRONG !!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat tmpf #!! WRONG !!
+"TRUESSON"
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue"
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ mv tmpf other_classes_inside_$(date +'%s_%Y-%m-%dT%H%M%S%z').lst #!! WRONG !!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ls other_classes_inside_1* #!! WRONG !!
+other_classes_inside_1707265416_2024-02-06T172336-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; awk '{print $1 " " "\"$2\""}'; done < other_classes_inside_with_count.lst #!! WRONG !!
+329 "$2"
+359 "$2"
+311 "$2"
+581 "$2"
+6 "$2"
+18 "$2"
+11 "$2"
+22 "$2"
+12 "$2"
+2 "$2"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; awk '{print $1 " \"" $2 "\""}'; done < other_classes_inside_with_count.lst #!! WRONG !!
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6 "embroideryTrue"
+18 "marginalbmdTrue"
+11 "reuseTrue"
+22 "reuseTrue"
+12 "reusebehindTrue"
+2 "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; awk '{print $1 " \"" $2 "\""}' >> tmpf; done < other_classes_inside_with_count.lst #!! WRONG !!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Clean it up myself, a bit (just format)
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat tmpf #!! WRONG !!
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6 "embroideryTrue"
+18 "marginalbmdTrue"
+11 "reuseTrue"
+22 "reuseTrue"
+12 "reusebehindTrue"
+2 "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim tmpf #!! WRONG !!
+
+
+
+################################
+################################
+##
+## REALIZATION
+##
+################################
+################################
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ##  Oops, something's eating the newline
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm tmpf
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm other_classes_inside_1707265416_2024-02-06T172336-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; echo $(sed 's#^\(.*\)$#"\1"#g;'); done < other_classes_inside.lst ## WHOA! WHAT'S HAPPENING THERE?
+"codtruebner112" "codtruebner147" "codtruebner21" "codtruebner26" "embroideryTrue" "marginalbmdTrue" "reuseTrue" "reuseTrue " "reusebehindTrue" "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; line_w_clarity=$(echo "${this_line}" | sed 's#^\(.*\)$#"\1"#g;'); echo "${line_w_clarity}"; done < other_classes_inside.lst ## IT'S EATING-THE-SPACE STUFF AGAIN!
+"TRUESSON"
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue"
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do this_line="${line}"; line_w_clarity=$(printf "${this_line}" | sed 's#^\(.*\)$#"\1"#g;');  "${line_w_clarity}"; done < other_classes_inside.lst
+-bash: "TRUESSON": command not found
+-bash: "codtruebner112": command not found
+-bash: "codtruebner147": command not found
+-bash: "codtruebner21": command not found
+-bash: "codtruebner26": command not found
+-bash: "embroideryTrue": command not found
+-bash: "marginalbmdTrue": command not found
+-bash: "reuseTrue": command not found
+-bash: "reuseTrue": command not found
+-bash: "reusebehindTrue": command not found
+-bash: "stitchTrue": command not found
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; echo $(sed 's#^\(.*\)$#"\1"#g;'); done < other_classes_inside.lst                                                                         -bash: syntax error near unexpected token `done'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do echo $(sed 's#^\(.*\)$#"\1"#g;'); done < other_classes_inside.lst
+"codtruebner112" "codtruebner147" "codtruebner21" "codtruebner26" "embroideryTrue" "marginalbmdTrue" "reuseTrue" "reuseTrue " "reusebehindTrue" "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^\(.*\)$#"\1"#g;'; done < other_classes_inside.lst
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue "
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  I didn't know that could be done!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^\(.*\)$#"\1"#g;'; done < other_classes_inside.lst > other_classes_inside_$(date +'%s_%Y-%m-%dT%H%M%S%z').lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_1707266035_2024-02-06T173355-0700.lst
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue "
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^\t\([0-9]\+\)\t\(.*\)$#\1 "\2"#g;'; done < other_classes_inside.lst
+codtruebner112
+codtruebner147
+codtruebner21
+codtruebner26
+embroideryTrue
+marginalbmdTrue
+reuseTrue
+reuseTrue
+reusebehindTrue
+stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^\t\([0-9]\+\)\t\(.*\)$#\1 "\2"#g;'; done < other_classes_inside_with_count.lst
+    329 codtruebner112
+    359 codtruebner147
+    311 codtruebner21
+    581 codtruebner26
+      6 embroideryTrue
+     18 marginalbmdTrue
+     11 reuseTrue
+     22 reuseTrue
+     12 reusebehindTrue
+      2 stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^[ \t]\+\([0-9]\+\)[ \t]\+\(.*\)$#\1 "\2"#g;'; done < other_classes_inside_with_count.lst
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6 "embroideryTrue"
+18 "marginalbmdTrue"
+11 "reuseTrue"
+22 "reuseTrue "
+12 "reusebehindTrue"
+2 "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ while read -r line; do sed 's#^[ \t]\+\([0-9]\+\)[ \t]\+\(.*\)$#\1 "\2"#g;'; done < other_classes_inside_with_count.lst > other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6 "embroideryTrue"
+18 "marginalbmdTrue"
+11 "reuseTrue"
+22 "reuseTrue "
+12 "reusebehindTrue"
+2 "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Some nicer formatting
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6   "embroideryTrue"
+18  "marginalbmdTrue"
+11  "reuseTrue"
+22  "reuseTrue "
+12  "reusebehindTrue"
+2   "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  I just realized "TRUESSON" got eaten somewhere.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_with_count.lst
+      2 TRUESSON
+    329 codtruebner112
+    359 codtruebner147
+    311 codtruebner21
+    581 codtruebner26
+      6 embroideryTrue
+     18 marginalbmdTrue
+     11 reuseTrue
+     22 reuseTrue
+     12 reusebehindTrue
+      2 stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  So, that sed-inside-the-loop trick eats the first line.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ I think it might be  echo  eating the trailing space that made the
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #+ previous attempts unsuccessful.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_with_count_1707266035_2024-02-06T173355-0700.lst
+2   "TRUESSON"
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6   "embroideryTrue"
+18  "marginalbmdTrue"
+11  "reuseTrue"
+22  "reuseTrue "
+12  "reusebehindTrue"
+2   "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #cat other_classes_inside_1707266035_2024-02-06T173355-0700.lst               
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside.lst
+TRUESSON
+codtruebner112
+codtruebner147
+codtruebner21
+codtruebner26
+embroideryTrue
+marginalbmdTrue
+reuseTrue
+reuseTrue
+reusebehindTrue
+stitchTrue
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim other_classes_inside_1707266035_2024-02-06T173355-0700.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ cat other_classes_inside_1707266035_2024-02-06T173355-0700.lst
+"TRUESSON"
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue "
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+#########################
+## SOME LEARNING OF UNEXPECTED BEHAVIOR.
+## TL;DR is that the last filenames are the good ones -
+##          i.e. the ones that show the trailing space
+##          and the first line
+#########################
+
+#  Okay, it wasn't the '-r' flag with read, 
+#+ it wasn't fixed with hexdump -C,
+#+ basically, the while loop was getting
+#+ in the way of sed reading the first line.
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed 's#^\(.*\)$#"\1"#g;' < other_classes_inside.lst
+"TRUESSON"
+"codtruebner112"
+"codtruebner147"
+"codtruebner21"
+"codtruebner26"
+"embroideryTrue"
+"marginalbmdTrue"
+"reuseTrue"
+"reuseTrue "
+"reusebehindTrue"
+"stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed 's#^[ \t]\+\([0-9]\+\)[ \t]\+\(.*\)$#\1 "\2"#g;' < other_classes_inside_with_count.lst
+2 "TRUESSON"
+329 "codtruebner112"
+359 "codtruebner147"
+311 "codtruebner21"
+581 "codtruebner26"
+6 "embroideryTrue"
+18 "marginalbmdTrue"
+11 "reuseTrue"
+22 "reuseTrue "
+12 "reusebehindTrue"
+2 "stitchTrue"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+
+####################################
+##
+##  At this point, I can see that the output I just got
+##+ is the pre-nicer-ized equivalent of the good files,
+##+ the good files being
+##+  other_classes_inside_1707266035_2024-02-06T173355-0700.lst
+##+ AND
+##+  other_classes_inside_1707266035_2024-02-06T173355-0700.lst
+##
+#####################################
+
+
+
+#  What I'll need ...
+
+find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f \
+  \( \
+    -name "*embroideryTrue*"  -o \
+    -name "*marginalbmdTrue*" -o \
+    -name "*reuseTrue*"       -o \
+    -name "*reusebehindTrue*" -o \
+    -name "*stitchTrue" \
+  \) \
+  -print0 | \
+ xargs -I'{}' -0 echo "{}" | tee -a last_files_with_classes.lst
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f \
+  \( \
+    -name "*embroideryTrue*"  -o \
+    -name "*marginalbmdTrue*" -o \
+    -name "*reuseTrue*"       -o \
+    -name "*reusebehindTrue*" -o \
+    -name "*stitchTrue" \
+  \) | wc -l
+89
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ >last_files_with_classes.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ find /cygdrive/d/Datasets_and_Models/P2_MSS \
+  -type f \
+  \( \
+    -name "*embroideryTrue*"  -o \
+    -name "*marginalbmdTrue*" -o \
+    -name "*reuseTrue*"       -o \
+    -name "*reusebehindTrue*" -o \
+    -name "*stitchTrue" \
+  \) \
+  -print0 | \
+ xargs -I'{}' -0 echo "{}" | tee -a last_files_with_classes.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_ir_-_reuseTrue_-_11682240.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_iv_-_reuseTrue_-_11682241.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_01_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_02_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_03_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_04_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_01_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_02_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_03_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/DATA_UNORGANIZED_-_toPutInCollectionFolders/FamilySearch_to_Organize/FS_INGSDOTTER-Hangar_04_Sweden_Kristianstad_reuseTrue_inside.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_ir_-_reuseTrue_-_11682240.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_iv_-_reuseTrue_-_11682241.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Misc/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_InProcess_MS_img_downloads/Misc/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___Yes_Reuse/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___No_Reuse/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/___No_Reuse/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__False_hasStitch/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Yes_Reuse/yes_for_training/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Yes_Reuse/yes_for_training/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Yes_Reuse/yes_for_training/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Not_Reuse/no_for_training/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/__Not_Reuse/no_for_test-and-dev/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_True/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_True/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_False/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_002_1057pastedown_reuseTrue_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_003_1057first_reusebehindTrue_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/try_magick_1pass_output_orig_1chFS_outfiles/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train/dataset_3ch_not_train/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_003_1057first_reusebehindTrue_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train/dataset_3ch_not_train/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train/dataset_3ch_yes_train/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train/dataset_3ch_yes_train/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train/dataset_3ch_yes_train/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_eval/dataset_3ch_not_eval/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_test/dataset_3ch_yes_test/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_test/dataset_3ch_yes_test/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_002_1057pastedown_reuseTrue_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_yes_train-eval/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_yes_train-eval/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_yes_train-eval/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_003_1057first_reusebehindTrue_al2tc.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/dataset_3ch_train-eval/dataset_3ch_not_train-eval/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_Color__ORIG/Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_Color__ORIG/Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_Color__ORIG/Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/_Yes_Reuse_Color__ORIG/SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/_No_Reuse_Color__ORIG/Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+/cygdrive/d/Datasets_and_Models/P2_MSS/Presentation_and_Paper/FamilySearch_-_DGS007996631_00676_-_reuseTrue_500w.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ wc -l last_files_with_classes.lst
+89 last_files_with_classes.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ awk -F'/' '{print $NF}' last_files_with_classes.lst | sort | uniq -c | wc -l
+27
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ awk -F'/' '{print $NF}' last_files_with_classes.lst | sort | uniq -c
+      2 AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+      2 AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+      2 AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+      2 FS_INGSDOTTER-Hangar_01_Sweden_Kristianstad_reuseTrue_inside.jpg
+      2 FS_INGSDOTTER-Hangar_02_Sweden_Kristianstad_reuseTrue_inside.jpg
+      2 FS_INGSDOTTER-Hangar_03_Sweden_Kristianstad_reuseTrue_inside.jpg
+      2 FS_INGSDOTTER-Hangar_04_Sweden_Kristianstad_reuseTrue_inside.jpg
+      1 FamilySearch_-_DGS007996631_00676_-_reuseTrue_500w.jpg
+      8 Heidelberg_-_salVII73__z4_00247_reuseTrue - Copy.png
+      6 Heidelberg_-_salVII73__z4_00248_reuseTrue - Copy.png
+      8 Heidelberg_-_salVII73__z4_00249_reuseTrue - Copy.png
+      6 Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.jpg
+      3 Lithuania_Tytuvenai_birth_1889_00319_marginalbmdTrue_marginalbmdTrue_-_FAMILY-VLAD-MARIJA.png
+      6 Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.jpg
+      3 Lithuania_ZemaiciuNaumiestis_birth_1910_00063_-_marginalbmdTrue_-_FAMILY-KOSTUS.png
+      2 SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_002_1057pastedown_reuseTrue_al2tc.png
+      3 SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_003_1057first_reusebehindTrue_al2tc.png
+      6 SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528.png
+      3 SellerLesEnluminures_-_franciscan-breviary-use-of-rome-141638_-_007_reusebehindTrue_1057f527v-528_al2tc.png
+      2 YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+      4 YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+      4 YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+      2 YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+      2 YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+      2 YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+      2 YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_ir_-_reuseTrue_-_11682240.tif
+      2 YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_iv_-_reuseTrue_-_11682241.tif
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed 's#^#\n#;' last_files_with_classes.lst | head
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ sed 's#^#\n\n#;' last_files_with_classes.lst > manual_rename_last_classes.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head -n 20 manual_rename_last_classes.sh
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ #  Here's the manual part, or maybe it will come after I restart the compy
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim manual_rename_last_classes.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ##  Actually, let's not worry about TIF files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ rm manual_rename_last_classes.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tif" last_files_with_classes.lst | wc -l
+20
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tif[f]\?" last_files_with_classes.lst | wc -l
+20
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tif[f]?" last_files_with_classes.lst | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tiff?" last_files_with_classes.lst | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tiff" last_files_with_classes.lst | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tif$" last_files_with_classes.lst
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_ir_-_reuseTrue_-_11682240.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_iv_-_reuseTrue_-_11682241.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_backcover_-_reuseTrue_-_10674001.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_spine_-_reuseTrue_-_10674000.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafr_-_reuseTrue_-_11682238.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_flyleafv_-_reuseTrue_-_11682239.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_ir_-_reuseTrue_-_11682240.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/No_Attribution_or_No_Permission/Yale/YaleBeineckeLibrary_SummaDePotenitentiaEtMatrimonio_MarstonMs127_iv_-_reuseTrue_-_11682241.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/__True_hasStitch/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_True/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_binding_-_reuseTrue_-_stitchTrue_-_10674002.tif
+/cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/_just_classified_folders/_hasStitch_True/YaleBeineckeLibrary_Aeneis_BeineckeMs1065_frontcover_-_reuseTrue_-_stitchTrue_-_10673885.tif
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep "tif$" last_files_with_classes.lst | wc -l
+20
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ grep -v "tif$" last_files_with_classes.lst | sed 's#^#\n\n#' > manually_rename_last_classes.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head manually_rename_last_classes.sh
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
+
+
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Now, for what the manual stuff will be, probably finished in N++
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # Oh, and probably finished after the computer restart
 
 
 
 
 
 
+##################################
+#  Manual renaming. I'm not going to do the details from
+#+ the previous SH files, with the orinal, the dir,
+#+ the bare filename, and the new filename. Anyone who
+#+ wants that will have to extract it.
+#
+
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ chmod a+x manually_rename_last_classes.sh
+
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ vim manually_rename_last_classes.sh
+
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ head manually_rename_last_classes.sh
+#!/usr/bin/env bash
+
+mv /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18r_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018r.jpg
 
 
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWetF9_fol18v_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_018v.jpg
 
 
+/cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
 
 
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ # I need to rename _everything_ from that AargauerKantonsbibliothek MsWetF9
 
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ ### !!!!!! Now, to restart the compy, then do the changes in Notepad++ !!! ##
 
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date
+Tue Feb  6 18:30:39 MST 2024
 
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$ date +'%s'
+1707269444
 
-
+Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+$
 
 
 
@@ -2663,7 +3945,7 @@ echo "mv \"${orig}\"  \"${new_fname}\" && "\
 #! REMEMBER TO CHANGE THE EXTENSION TO '.sh' AND TO MAKE IT EXECUTABLE !#
 
 
-# date +'%s' && time ./rename_of_it_png_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 | tee renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+# date +'%s' && time ./rename_of_it_png_to_last_1_<whatever-it-is-with-timestamp>.sh 2>&1 | tee renaming_png_to_last_1__$(date +'%s_%Y-%m-%dT%H%M%S%z').out && date +'%s'
 
 # #actual filename# ''
 
