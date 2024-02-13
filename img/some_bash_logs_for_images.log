@@ -4814,8 +4814,87 @@ $ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[
 
 
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
-$ identify -format "%[colorspace] %[channels]\n" *.png | sort | uniq -c
+$ identify -format "%[colorspace] %[channels]\n" *.png | sort | uniq -c            1190 Gray gray
+  10282 sRGB srgb
+      7 sRGB srgba
 
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # Just finished, so date
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s'
+Tue Feb 13 01:16:33 MST 2024
+1707812193
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*Seller*.png" | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # Ahah! Part of it.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "VatPaLat*.png" -print0 | xargs -I'{}' -0 identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" "{}"
+PNG sRGB TrueColorAlpha png 8 srgba
+PNG sRGB TrueColorAlpha png 8 srgba
+PNG sRGB TrueColorAlpha png 8 srgba
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # I'm just moving them.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" frustration-quotes-wrong.png
+PNG sRGB TrueColorAlpha png 8 srgba
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" Half_Dostoevsky_with_alpha.png
+PNG sRGB TrueColorAlpha png 8 srgba
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # 2 more found, 2 to go.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # Look at my presentation, again.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" Rest_of_Story_Gone_-_Frustration.png
+PNG sRGB TrueColorAlpha png 8 srgba
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # found it!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" Heidelberg_salVII73_front-cover_smaller.png ^C
+channels]\n" Heidelberg_salVII73_front-cover_smaller.png ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" Heid^C
+channels]\n" Heid^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # Whatever, it's that smaller thing. I'm moving it.
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s' && time mogrify -format jpg -quality 92 -colorspace srgb -type truecolor *.png && date && date +'%s'
+Tue Feb 13 01:38:56 MST 2024
+1707813536
+
+
+## And we let them go overnight.
 
 
 
@@ -4827,6 +4906,44 @@ $ cd ../Fin_FHTC_Paper_jpg_unknown_ch/
 
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
 $ identify -format "%[colorspace] %[bit-depth] %[channels]\n" *.jpg | sort | uniq -c
+   5325 Gray 8 gray
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ time mogrify -colorspace srgb -type truecolor *.jpg
+
+
+
+# and another terminal
+
+bballdave025@MY-MACHINE ~
+$ cd 'D:\Datasets_and_Models\P2_MSS\DatasetBinding\The_Wild_FS_orig_GS'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/The_Wild_FS_orig_GS
+$ identify -format "%[colorspace] %[bit-depth] %[channels]\n" *.jpg | sort | uniq -c
+    395 Gray 8 gray
+      1 sRGB 8 srgb
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/The_Wild_FS_orig_GS
+$ time mogrify -colorspace srgb -type truecolor *.jpg
+
+real    4m16.466s
+user    4m17.734s
+sys     2m23.796s
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/The_Wild_FS_orig_GS
+$ date && date +'%s' # done right after finish
+Tue Feb 13 01:09:31 MST 2024
+1707811771
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/DatasetBinding/The_Wild_FS_orig_GS
+$
+
+
+
+# Both of the last two were ready about 01:07:00-07:00 on 2024-02-13. The first, PNG one is still identifying the 11.4k. I hope it scales linearly in time.
+
+
+
 
 
 
