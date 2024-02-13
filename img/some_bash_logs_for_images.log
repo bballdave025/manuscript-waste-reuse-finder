@@ -4701,6 +4701,81 @@ Mon Feb 12 23:57:47 MST 2024
 bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
 $
 
+##  Need to find the list of things like _al2tc.png, ...
+##+ though the ending one needs to stay.
+
+
+
+
+https://www.imagemagick.org/discourse-server/viewtopic.php?t=16464
+Yes, for CMYK, specifying 2 profiles seems to work. (The CMYK files I have don't have a profile). Actually both this:
+CODE: SELECT ALL
+
+convert $f -profile $cmyk_icc -profile $srgb_icc output.jpg
+and this
+CODE: SELECT ALL
+
+convert $f -colorspace RGB output.jpg
+give acceptable images
+
+
+
+https://www.imagemagick.org/discourse-server/viewtopic.php?t=31400
+Before conversion of a PNG to JPG, in Photoshop, I see:
+
+5"x7.5"
+300ppi
+
+When I use this command:
+CODE: SELECT ALL
+
+convert image.png -flatten -density 72 -depth 8 -quality 100 -units PixelsPerInch image.jpg
+Photoshop shows me:
+
+8.242"x12.363"
+182ppi
+
+Just curious why the images is 182ppi?
+
+What I was expecting to see:
+
+20.833"x31.25"
+72ppi
+
+Thanks!
+
+
+
+
+
+https://superuser.com/questions/71028/batch-converting-png-to-jpg-in-linux
+I am not an expert in the actual usage, but I know you can pretty much do anything image-related with this!
+
+An example is:
+
+convert image.png image.jpg
+which will keep the original as well as creating the converted image.
+
+As for batch conversion, I think you need to use the Mogrify tool which is part of ImageMagick.
+
+Keep in mind that this overwrites the old images.
+
+The command is:
+
+mogrify -format jpg *.png
+
+
+... Comments ...
+
+To convert PNG's with transparent background, use the following command: 
+
+mogrify -format jpg -background black -flatten *.png
+
+@KevinCox on my linux box after mogrify -format jpeg img.png I have 2 files and file img.* reports one png, the original untouched, and a new jpeg one. So mogrify does not overwrite original files in this case.
+
+If you need to compress your png's more use 
+
+mogrify -quality 75 -format jpg *.png
 
 
 
@@ -4708,14 +4783,63 @@ $
 
 
 
+If your PNG is transparent, try adding a black bg before converting:
+
+mogrify -format jpg -background black -flatten *.png
+
+or a white bg:
+
+mogrify -format jpg -background white -flatten *.png
+
+
+
+Okay, to the command prompt
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s'
+Mon Feb 12 23:57:47 MST 2024
+1707807467
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.png | sort | uniq -c
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ identify -format "%[colorspace] %[channels]\n" *.png | sort | uniq -c
 
 
 
 
+# To another terminal
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts
+$ cd ../Fin_FHTC_Paper_jpg_unknown_ch/
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ identify -format "%[colorspace] %[bit-depth] %[channels]\n" *.jpg | sort | uniq -c
 
 
 
+# From my notes
 
+magick mogrify -colorspace srgb -type truecolor *.jpg
+
+
+So
+
+##### LET'S DO #####
+
+mogrify -format jpg -quality 92 -colorspace srgb -type truecolor *.png
 
 
 
