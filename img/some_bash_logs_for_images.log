@@ -3728,13 +3728,13 @@ $ # Oh, and probably finished after the computer restart
 #+ wants that will have to extract it.
 #
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ chmod a+x manually_rename_last_classes.sh
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ vim manually_rename_last_classes.sh
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ head manually_rename_last_classes.sh
 #!/usr/bin/env bash
 
@@ -3747,27 +3747,481 @@ mv /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKanto
 /cygdrive/d/Datasets_and_Models/P2_MSS/toPutInCollectionFolders/AargauerKantonsbibliothek_-_MsWettF9_fol6r_embroideryTrue_-_CHAK___F_CHAK__MSWETTF_9___0SXMHHF_ECODIC_kba-WettF0009_006r.jpg
 
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ # I need to rename _everything_ from that AargauerKantonsbibliothek MsWetF9
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ ### !!!!!! Now, to restart the compy, then do the changes in Notepad++ !!! ##
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ date
 Tue Feb  6 18:30:39 MST 2024
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $ date +'%s'
 1707269444
 
-Anast@DESKTOP-O7KM5A5 /cygdrive/d/Datasets_and_Models/P2_MSS
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS
 $
 
 
 
 
 
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+## Further renaming
+## for bigger dataset
+##
+## 2024-02-12
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "# orig: ${orig}"; my_num=0; my_unpad=$(echo "${orig}" | sed '"'"'s#^[.]/\(.*\)[.]jpg$#\1#g'"'"'); echo "# my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "# my_num: ${my_num}"; my_new_fname="${my_prefix}_${my_num}.jpg"; echo -e "#   Command will be:\nmv \"${orig}\" \"${my_new_fname}\" && echo \"... success moving  ${orig}  to  ${my_new_fname}\" || echo \"... Failure moving  ${orig}  to  ${my_new_fname}\""' > rename_from_numbers.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head -n 20 rename_from_numbers.sshh
+# orig: ./113.jpg
+# my_unpad: 113
+# my_num: 00113
+#   Command will be:
+mv "./113.jpg" "BnE_-_CronicaCatalynya_Mss1880_00113.jpg" && echo "... success moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg" || echo "... Failure moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg"
+# orig: ./114.jpg
+# my_unpad: 114
+# my_num: 00114
+#   Command will be:
+mv "./114.jpg" "BnE_-_CronicaCatalynya_Mss1880_00114.jpg" && echo "... success moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg" || echo "... Failure moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg"
+# orig: ./115.jpg
+# my_unpad: 115
+# my_num: 00115
+#   Command will be:
+mv "./115.jpg" "BnE_-_CronicaCatalynya_Mss1880_00115.jpg" && echo "... success moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg" || echo "... Failure moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg"
+# orig: ./116.jpg
+# my_unpad: 116
+# my_num: 00116
+#   Command will be:
+mv "./116.jpg" "BnE_-_CronicaCatalynya_Mss1880_00116.jpg" && echo "... success moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg" || echo "... Failure moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ tail rename_from_numbers.sshh
+# orig: ./136.jpg
+# my_unpad: 136
+# my_num: 00136
+#   Command will be:
+mv "./136.jpg" "BnE_-_CronicaCatalynya_Mss1880_00136.jpg" && echo "... success moving  ./136.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00136.jpg" || echo "... Failure moving  ./136.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00136.jpg"
+# orig: ./137.jpg
+# my_unpad: 137
+# my_num: 00137
+#   Command will be:
+mv "./137.jpg" "BnE_-_CronicaCatalynya_Mss1880_00137.jpg" && echo "... success moving  ./137.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00137.jpg" || echo "... Failure moving  ./137.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00137.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ # adding shebang
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ vim rename_from_numbers.sshh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head rename_from_numbers.sshh
+#!/usr/bin/env bash
+
+
+# orig: ./113.jpg
+# my_unpad: 113
+# my_num: 00113
+#   Command will be:
+mv "./113.jpg" "BnE_-_CronicaCatalynya_Mss1880_00113.jpg" && echo "... success moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg" || echo "... Failure moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg"
+# orig: ./114.jpg
+# my_unpad: 114
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ grep -v "^#" rename_from_numbers.sshh > rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head rename_from_numbers.sh
+
+
+mv "./113.jpg" "BnE_-_CronicaCatalynya_Mss1880_00113.jpg" && echo "... success moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg" || echo "... Failure moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg"
+mv "./114.jpg" "BnE_-_CronicaCatalynya_Mss1880_00114.jpg" && echo "... success moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg" || echo "... Failure moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg"
+mv "./115.jpg" "BnE_-_CronicaCatalynya_Mss1880_00115.jpg" && echo "... success moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg" || echo "... Failure moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg"
+mv "./116.jpg" "BnE_-_CronicaCatalynya_Mss1880_00116.jpg" && echo "... success moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg" || echo "... Failure moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg"
+mv "./117.jpg" "BnE_-_CronicaCatalynya_Mss1880_00117.jpg" && echo "... success moving  ./117.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00117.jpg" || echo "... Failure moving  ./117.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00117.jpg"
+mv "./118.jpg" "BnE_-_CronicaCatalynya_Mss1880_00118.jpg" && echo "... success moving  ./118.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00118.jpg" || echo "... Failure moving  ./118.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00118.jpg"
+mv "./119.jpg" "BnE_-_CronicaCatalynya_Mss1880_00119.jpg" && echo "... success moving  ./119.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00119.jpg" || echo "... Failure moving  ./119.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00119.jpg"
+mv "./120.jpg" "BnE_-_CronicaCatalynya_Mss1880_00120.jpg" && echo "... success moving  ./120.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00120.jpg" || echo "... Failure moving  ./120.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00120.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ wc -l rename_from_numbers.sh
+176 rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ find . -type f -iname "*.jpg" | wc -l
+174
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ vim rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head rename_from_numbers.sh
+#!/usr/bin/env bash
+
+mv "./113.jpg" "BnE_-_CronicaCatalynya_Mss1880_00113.jpg" && echo "... success moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg" || echo "... Failure moving  ./113.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00113.jpg"
+mv "./114.jpg" "BnE_-_CronicaCatalynya_Mss1880_00114.jpg" && echo "... success moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg" || echo "... Failure moving  ./114.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00114.jpg"
+mv "./115.jpg" "BnE_-_CronicaCatalynya_Mss1880_00115.jpg" && echo "... success moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg" || echo "... Failure moving  ./115.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00115.jpg"
+mv "./116.jpg" "BnE_-_CronicaCatalynya_Mss1880_00116.jpg" && echo "... success moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg" || echo "... Failure moving  ./116.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00116.jpg"
+mv "./117.jpg" "BnE_-_CronicaCatalynya_Mss1880_00117.jpg" && echo "... success moving  ./117.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00117.jpg" || echo "... Failure moving  ./117.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00117.jpg"
+mv "./118.jpg" "BnE_-_CronicaCatalynya_Mss1880_00118.jpg" && echo "... success moving  ./118.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00118.jpg" || echo "... Failure moving  ./118.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00118.jpg"
+mv "./119.jpg" "BnE_-_CronicaCatalynya_Mss1880_00119.jpg" && echo "... success moving  ./119.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00119.jpg" || echo "... Failure moving  ./119.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00119.jpg"
+mv "./120.jpg" "BnE_-_CronicaCatalynya_Mss1880_00120.jpg" && echo "... success moving  ./120.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00120.jpg" || echo "... Failure moving  ./120.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00120.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ wc -l < rename_from_numbers.sh
+176
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ sort rename_from_numbers.sh > do_rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head rename_from_numbers.s
+head: cannot open 'rename_from_numbers.s' for reading: No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head do_rename_from_numbers.sh
+
+#!/usr/bin/env bash
+mv "./1.jpg" "BnE_-_CronicaCatalynya_Mss1880_00001.jpg" && echo "... success moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg" || echo "... Failure moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg"
+mv "./10.jpg" "BnE_-_CronicaCatalynya_Mss1880_00010.jpg" && echo "... success moving  ./10.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00010.jpg" || echo "... Failure moving  ./10.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00010.jpg"
+mv "./100.jpg" "BnE_-_CronicaCatalynya_Mss1880_00100.jpg" && echo "... success moving  ./100.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00100.jpg" || echo "... Failure moving  ./100.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00100.jpg"
+mv "./101.jpg" "BnE_-_CronicaCatalynya_Mss1880_00101.jpg" && echo "... success moving  ./101.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00101.jpg" || echo "... Failure moving  ./101.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00101.jpg"
+mv "./102.jpg" "BnE_-_CronicaCatalynya_Mss1880_00102.jpg" && echo "... success moving  ./102.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00102.jpg" || echo "... Failure moving  ./102.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00102.jpg"
+mv "./103.jpg" "BnE_-_CronicaCatalynya_Mss1880_00103.jpg" && echo "... success moving  ./103.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00103.jpg" || echo "... Failure moving  ./103.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00103.jpg"
+mv "./104.jpg" "BnE_-_CronicaCatalynya_Mss1880_00104.jpg" && echo "... success moving  ./104.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00104.jpg" || echo "... Failure moving  ./104.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00104.jpg"
+mv "./105.jpg" "BnE_-_CronicaCatalynya_Mss1880_00105.jpg" && echo "... success moving  ./105.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00105.jpg" || echo "... Failure moving  ./105.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00105.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ # Better
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ chmod a+x do_rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ date && date +'%s'
+Mon Feb 12 15:34:34 MST 2024
+1707777275
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head do_rename_from_numbers.sh
+
+#!/usr/bin/env bash
+mv "./1.jpg" "BnE_-_CronicaCatalynya_Mss1880_00001.jpg" && echo "... success moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg" || echo "... Failure moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg"
+mv "./10.jpg" "BnE_-_CronicaCatalynya_Mss1880_00010.jpg" && echo "... success moving  ./10.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00010.jpg" || echo "... Failure moving  ./10.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00010.jpg"
+mv "./100.jpg" "BnE_-_CronicaCatalynya_Mss1880_00100.jpg" && echo "... success moving  ./100.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00100.jpg" || echo "... Failure moving  ./100.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00100.jpg"
+mv "./101.jpg" "BnE_-_CronicaCatalynya_Mss1880_00101.jpg" && echo "... success moving  ./101.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00101.jpg" || echo "... Failure moving  ./101.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00101.jpg"
+mv "./102.jpg" "BnE_-_CronicaCatalynya_Mss1880_00102.jpg" && echo "... success moving  ./102.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00102.jpg" || echo "... Failure moving  ./102.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00102.jpg"
+mv "./103.jpg" "BnE_-_CronicaCatalynya_Mss1880_00103.jpg" && echo "... success moving  ./103.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00103.jpg" || echo "... Failure moving  ./103.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00103.jpg"
+mv "./104.jpg" "BnE_-_CronicaCatalynya_Mss1880_00104.jpg" && echo "... success moving  ./104.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00104.jpg" || echo "... Failure moving  ./104.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00104.jpg"
+mv "./105.jpg" "BnE_-_CronicaCatalynya_Mss1880_00105.jpg" && echo "... success moving  ./105.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00105.jpg" || echo "... Failure moving  ./105.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00105.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ vim do_rename_from_numbers.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ head -n 3 do_rename_from_numbers.sh
+#!/usr/bin/env bash
+
+mv "./1.jpg" "BnE_-_CronicaCatalynya_Mss1880_00001.jpg" && echo "... success moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg" || echo "... Failure moving  ./1.jpg  to  BnE_-_CronicaCatalynya_Mss1880_00001.jpg"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880
+$ ./do_rename_from_numbers.sh 2>&1 | tee doing_rename_from_numbers_$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+
+
+
+
+
+
+
+
+
+bballdave025@MY-MACHINE ~
+$ cd 'D:\Datasets_and_Models\P2_RMFs_Less_Noisy\Final_for_FHTC_Paper_Various_Exts\TIFF'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.tiff
+identify: Invalid TIFF directory; tags are not sorted in ascending order. `TIFFReadDirectoryCheckOrder' @ warning/tiff.c/TIFFWarnings/1044.
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+TIFF sRGB TrueColor tiff 8 srgb
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ pwd
+/cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ date && date +'%s'
+Mon Feb 12 19:40:19 MST 2024
+1707792019
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ # Converting all to 3-channel JPG files
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ identify -format "\n\n%f\n%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.tiff
+identify: Invalid TIFF directory; tags are not sorted in ascending order. `TIFFReadDirectoryCheckOrder' @ warning/tiff.c/TIFFWarnings/1044.
+
+
+Beinecke_MarstonMs127_5r.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_MarstonMs127_5v.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_MarstonMs127_flyleafr.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_MarstonMs127_flyleafv.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_MarstonMs127_ir.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_MarstonMs127_iv.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_Ms1065_backcover.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_Ms1065_binding.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_Ms1065_frontcover.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+Beinecke_Ms1065_spine.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+UniversiteitLeidenLibriMissalisFragmentaBPL25_f022v-023r.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+UniversiteitLeidenLibriMissalisFragmentaBPL25_f023v-024r.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+UppsulaUniversitet_-_LetterUUBWallerMsFrench-06723__00001.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+
+UppsulaUniversitet_-_LetterUUBWallerMsFrench-06723__00002.tiff
+TIFF sRGB TrueColor tiff 8 srgb
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ mogrify -format jpg -quality 92 *.tiff
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ date +'%s_%Y-%m-%dT%H%M%S%z'
+1707795330_2024-02-12T203530-0700
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ date +'%s_%Y-%m-%dT%H%M%S%z'
+1707796207_2024-02-12T205007-0700
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/TIFF
+$ cd ../../
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy
+$ cd Fin_FHTC_Paper_jpg_unknown_ch/
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ head renaming_keith_wonderful_stuff.sh
+# old_fname: 008279840_00478.jpg
+# new_fname: FamilySearch_-_DGS008279840_00478.jpg
+#   Command:
+mv "008279840_00478.jpg" tmpf && mv tmpf "FamilySearch_-_DGS008279840_00478.jpg"
+# old_fname: 008279840_00001.jpg
+# new_fname: FamilySearch_-_DGS008279840_00001.jpg
+#   Command:
+mv "008279840_00001.jpg" tmpf && mv tmpf "FamilySearch_-_DGS008279840_00001.jpg"
+# old_fname: 008279840_00002.jpg
+# new_fname: FamilySearch_-_DGS008279840_00002.jpg
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$
+
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ grep ^mv renaming_keith_wonderful_stuff.sh | wc -l
+5325
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ history | tail -n 20
+  519  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "# old_fname: ${old_fname}";
+new_fname="FamilySearch_-_DGS${old_fname}";
+echo "# new_fname: ${new_fname}";
+echo "#   Command:";
+echo "mv \"${old_fname}\" tmpf && mv tmpf \"${new_fname}\"";
+' | head
+  520  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "# old_fname: ${old_fname}";
+new_fname="FamilySearch_-_DGS${old_fname}";
+echo "# new_fname: ${new_fname}";
+echo "#   Command:";
+echo "mv \"${old_fname}\" tmpf && mv tmpf \"${new_fname}\"";
+' > renaming_keith_wonderful_stuff.sh
+  521  head renaming_keith_wonderful_stuff.sh
+  522  grep ^mv renaming_keith_wonderful_stuff.sh
+  523  grep ^mv renaming_keith_wonderful_stuff.sh | wc -l
+  524  history | tail -n 20
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ history | tail -n 90
+  463  stat rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh
+  464  bash rename_of_it_jpg_to_last_0_1707077619_2024-02-04T131339-0700.sh 2>&1 | tee renaming_jpg_to_last_0__1707148698_2024-02-05T085818-0700.out
+  465  ls *.out
+  466  ls *.out
+  467  tail after_first_class_find.lst
+  468  exit
+  469  cd /cygdrive/d/Datasets_and_Models/P2_MSS/BibliotecaNacionalDeEspana/BnE_-_CronicaCatalynya_Mss1880/
+  470  find . -type f -iname *.jpg -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "orig: ${orig}"; my_num=0; my_unpad=${orig}; echo "my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; echo "my_num: ${my_num}";' | head -n 20
+  471  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "orig: ${orig}"; my_num=0; my_unpad=${orig}; echo "my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; echo "my_num: ${my_num}";' | head -n 20
+  472  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "orig: ${orig}"; my_num=0; my_unpad=${orig}; echo "my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "my_num: ${my_num}";' | head -n 20
+  473  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "orig: ${orig}"; my_num=0; my_unpad=$(echo "${orig}" | sed '"'"'s#^[.]/\(.*\)[.]jpg$#\1#g'"'"'); echo "my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "my_num: ${my_num}";' | head -n 20
+  474  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "# orig: ${orig}"; my_num=0; my_unpad=$(echo "${orig}" | sed '"'"'s#^[.]/\(.*\)[.]jpg$#\1#g'"'"'); echo "# my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "# my_num: ${my_num}"; my_new_fname="${my_prefix}_${my_num}.jpg"; echo -e "#   Command will be:\nmv \"\" \"\" && echo \"... success moving ${orig} to ${my_new_fname}\" || echo \"... Failure moving ${orig} to ${my_new_fname}\""' | head -n 20
+  475  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "# orig: ${orig}"; my_num=0; my_unpad=$(echo "${orig}" | sed '"'"'s#^[.]/\(.*\)[.]jpg$#\1#g'"'"'); echo "# my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "# my_num: ${my_num}"; my_new_fname="${my_prefix}_${my_num}.jpg"; echo -e "#   Command will be:\nmv \"${orig}\" \"${my_new_fname}\" && echo \"... success moving  ${orig}  to  ${my_new_fname}\" || echo \"... Failure moving  ${orig}  to  ${my_new_fname}\""' | head -n 20
+  476  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c 'orig="{}"; my_prefix="BnE_-_CronicaCatalynya_Mss1880"; echo "# orig: ${orig}"; my_num=0; my_unpad=$(echo "${orig}" | sed '"'"'s#^[.]/\(.*\)[.]jpg$#\1#g'"'"'); echo "# my_unpad: ${my_unpad}"; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "# my_num: ${my_num}"; my_new_fname="${my_prefix}_${my_num}.jpg"; echo -e "#   Command will be:\nmv \"${orig}\" \"${my_new_fname}\" && echo \"... success moving  ${orig}  to  ${my_new_fname}\" || echo \"... Failure moving  ${orig}  to  ${my_new_fname}\""' > rename_from_numbers.sshh
+  477  head -n 20 rename_from_numbers.sshh
+  478  tail rename_from_numbers.sshh
+  479  # adding shebang
+  480  vim rename_from_numbers.sshh
+  481  head rename_from_numbers.sshh
+  482  grep -v "^#" rename_from_numbers.sshh > rename_from_numbers.sh
+  483  head rename_from_numbers.sh
+  484  wc -l rename_from_numbers.sh
+  485  find . -type f -iname "*.jpg" | wc -l
+  486  vim rename_from_numbers.sh
+  487  head rename_from_numbers.sh
+  488  wc -l < rename_from_numbers.sh
+  489  sort rename_from_numbers.sh > do_rename_from_numbers.sh
+  490  head rename_from_numbers.s
+  491  head do_rename_from_numbers.sh
+  492  # Better
+  493  chmod a+x do_rename_from_numbers.sh
+  494  date && date +'%s'
+  495  head do_rename_from_numbers.sh
+  496  vim do_rename_from_numbers.sh
+  497  head -n 3 do_rename_from_numbers.sh
+  498  ./do_rename_from_numbers.sh 2>&1 | tee doing_rename_from_numbers_$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+  499  grep -i failure doing_rename_from_numbers_1707777492_2024-02-12T153812-0700.out
+  500  exit
+  501  cd 'D:\Datasets_and_Models\P2_RMFs_Less_Noisy\Final_for_FHTC_Paper_Various_Exts\TIFF'
+  502  identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.tiff
+  503  pwd
+  504  date && date +'%s'
+  505  # Converting all to 3-channel JPG files
+  506  identify -format "\n\n%f\n%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.tiff
+  507  mogrify jpg *.tiff
+  508  mogrify *.tiff jpg
+  509  mogrify -format jpg -quality 92 *.tiff
+  510  date +'%s_%Y-%m-%dT%H%M%S%z'
+  511  mogrify -format jpg -quality 92 Beinecke_MarstonMs127_iv.tiff
+  512  date +'%s_%Y-%m-%dT%H%M%S%z'
+  513  cd ../../
+  514  cd Fin_FHTC_Paper_jpg_unknown_ch/
+  515  identify -format "%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.jpg | head
+  516  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "old_fname: ${old_fname}"
+;' | head
+  517  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "old_fname: ${old_fname}";
+' | head
+  518  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "# old_fname: ${old_fname}";
+new_fname="FamilySearch_-_DGS${old_fname}";' | head
+  519  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "# old_fname: ${old_fname}";
+new_fname="FamilySearch_-_DGS${old_fname}";
+echo "# new_fname: ${new_fname}";
+echo "#   Command:";
+echo "mv \"${old_fname}\" tmpf && mv tmpf \"${new_fname}\"";
+' | head
+  520  find . -type f -iname "*.jpg" -print0 | xargs -I'{}' -0 bash -c '
+orig="{}"; old_fname=$(echo "${orig}" | sed '"'"'s#^[.]/##g'"'"');
+echo "# old_fname: ${old_fname}";
+new_fname="FamilySearch_-_DGS${old_fname}";
+echo "# new_fname: ${new_fname}";
+echo "#   Command:";
+echo "mv \"${old_fname}\" tmpf && mv tmpf \"${new_fname}\"";
+' > renaming_keith_wonderful_stuff.sh
+  521  head renaming_keith_wonderful_stuff.sh
+  522  grep ^mv renaming_keith_wonderful_stuff.sh
+  523  grep ^mv renaming_keith_wonderful_stuff.sh | wc -l
+  524  history | tail -n 20
+  525  history | tail -n 50
+  526  history | tail -n 100
+  527  history | tail -n 150
+  528  history | tail -n 115
+  529  history | tail -n 90
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Fin_FHTC_Paper_jpg_unknown_ch
+$ ./do_rename_keith_wonderful_stuff.sh 2>&1 | tee doing_rename_keith_wonderful_stuff_$(date +'%s_%Y-%m-%dT%H%M%S%z').out # out should only get errors, and we hope there aren't any of those
+
+# No output
 
 
 
@@ -3783,6 +4237,469 @@ $
 
 
 
+
+
+## Another terminal
+
+bballdave025@MY-MACHINE ~
+$ date && date +'%s'
+Mon Feb 12 22:37:44 MST 2024
+1707802664
+
+bballdave025@MY-MACHINE ~
+$ # moved all  png  files (allowing duplicates with parentheses and numbers)
+
+bballdave025@MY-MACHINE ~
+$ # to ...
+
+bballdave025@MY-MACHINE ~
+$ cd 'D:\Datasets_and_Models\P2_RMFs_Less_Noisy\Final_for_FHTC_Paper_Various_Exts\PNG'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f | wc -l
+18156
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | wc -l
+18156
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*).png" | head
+./zLOC_-_MarcoPolo_gdcwdl-wdl-14300_p210-1296 (8).png
+./zLOC_-_Book-of-Hours_service-gdc-gdcwdl-wd-l_-12-99-7-wdl_12997-wdl_12997_p69-432 (5).png
+./BeineckeMs1119-10622001_00005 (13).png
+./BeineckeMs1119-10622001_00105 (3).png
+./Bodleian-Library-MS-Hatton-113_00327 (6).png
+./Heidelberg_-_salVIII8__z3_p186-1143 (6).png
+./Bodl_MS-Laud-Misc-155A_00002 (3).png
+./HermetschwilBndnktnKlstr_CodChart139_025 (2).png
+./Hungary_09060_p39-184 (10).png
+./HermetschwilBndnktnKlstr_CodChart139_00006 (3).png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*).png" | wc -l
+5196
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -not -iname "*).png" | wc -l
+12960
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep [)(]
+-bash: syntax error near unexpected token `)'
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep [\)\(] | wc -l
+5196
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep - v [\)\(] | wc -l
+grep: v: No such file or directory
+grep: [)(]: No such file or directory
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep -v [\)\(] | wc -l
+12960
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+
+
+
+## figuring out weird names from pdf2png stuff
+
+>../new_fnames_see_if_exist.lst
+while read -r line; do \
+  bad_fname="${line}"; \
+  echo; \
+  echo "# bad_fname: ${bad_fname}"; \
+  my_first=$(echo "${bad_fname}" | \
+    sed 's#^[.]/\(.*\)p\([0-9]\+\)[-][0-9]\+\([.]png\)$#\1#g'); \
+  echo "# my_first: ${my_first}"; \
+  my_end=$(echo "${bad_fname}" | \
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\3#g'); \
+  echo "# my_end: ${my_end}"; \
+  my_second=$(echo "${bad_fname}" | \
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g'); 
+  echo "# my_second: $my_second"; \
+  my_num=0; \
+  my_unpad=$(echo "${my_second}+1" | bc); \
+  echo "# my_unpad: ${my_unpad}"; \
+  my_num=0; \
+  if [ $my_unpad -lt 10 ]; then \
+    my_num="0000${my_unpad}"; \
+  elif [ $my_unpad -lt 100 ]; then \
+    my_num="000${my_unpad}"; \
+  elif [ $my_unpad -lt 1000 ]; then \
+    my_num="00${my_unpad}"; \
+  elif [ $my_unpad -lt 10000 ]; \
+    then   my_num="0${my_unpad}"; \
+  else 
+    my_num="${my_unpad}"; \
+  fi; \
+  echo "# my_num: ${my_num}"; \
+  new_fname="${my_first}${my_num}${my_end}"; \
+  echo "new_fname: ${new_fname}" >> \
+    ../new_fnames_see_if_exist.lst; \
+  echo "mv \"${bad_fname}\" \"${new_fname}\"";
+done < ../fnames_not_pdf2png_renamed.lst | tee do_rename_if_needed.sh
+
+
+
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ awk '{print $2}' ../new_fnames_see_if_exist.lst > ../bare_new_fnames_to_check.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head ../bare_new_fnames_to_check.lst
+Bodleian-Library-MS-Add-A-263_00001.png
+Bodleian-Library-MS-Add-A-263_00011.png
+Bodleian-Library-MS-Add-A-263_00101.png
+Bodleian-Library-MS-Add-A-263_00102.png
+Bodleian-Library-MS-Add-A-263_00103.png
+Bodleian-Library-MS-Add-A-263_00104.png
+Bodleian-Library-MS-Add-A-263_00105.png
+Bodleian-Library-MS-Add-A-263_00106.png
+Bodleian-Library-MS-Add-A-263_00107.png
+Bodleian-Library-MS-Add-A-263_00108.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ls ../*.lst
+../bare_new_fnames_to_check.lst    ../fnames_png_pre.lst
+../fnames_not_pdf2png_renamed.lst  ../new_fnames_see_if_exist.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head ../fnames_png_pre.lst
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00001.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00002.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00003.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00004.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00005.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00006.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00007.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00008.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00009.png
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00010.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ sed -i.bak 's#^[.]/##g' ../fnames_png_pre.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head ../fnames_png_pre.lst
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00001.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00002.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00003.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00004.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00005.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00006.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00007.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00008.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00009.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00010.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -12 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | wc -l
+1454
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -23 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | wc -l
+11506
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -23 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | wc -l
+11506
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -13 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | wc -l
+1191
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -13 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | head
+Bodleian-Library-MS-Bodl-168_00001.png
+Bodleian-Library-MS-Bodl-168_00003.png
+Bodleian-Library-MS-Bodl-168_00004.png
+Bodleian-Library-MS-Bodl-168_00005.png
+Bodleian-Library-MS-Bodl-168_00006.png
+Bodleian-Library-MS-Bodl-168_00007.png
+Bodleian-Library-MS-Bodl-168_00008.png
+Bodleian-Library-MS-Bodl-168_00009.png
+Bodleian-Library-MS-Bodl-168_00010.png
+Bodleian-Library-MS-Bodl-168_00011.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "Bodleian-Library-MS-Bodl-168_00001.png"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -12 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | head
+Bodleian-Library-MS-Add-A-263_00001.png
+Bodleian-Library-MS-Add-A-263_00004.png
+Bodleian-Library-MS-Add-A-263_00005.png
+Bodleian-Library-MS-Add-A-263_00006.png
+Bodleian-Library-MS-Add-A-263_00007.png
+Bodleian-Library-MS-Add-A-263_00008.png
+Bodleian-Library-MS-Add-A-263_00009.png
+Bodleian-Library-MS-Add-A-263_00010.png
+Bodleian-Library-MS-Add-A-263_00011.png
+Bodleian-Library-MS-Add-A-263_00012.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "Bodleian-Library-MS-Add-A-263_00001.png"
+./Bodleian-Library-MS-Add-A-263_00001.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -23 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) | head
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00001.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00002.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00003.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00004.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00005.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00006.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00007.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00008.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00009.png
+BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00010.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00001.png"
+./BNFrance_-_Recueil_de_fabliaux_dits_contes_-_MsFr837-btv1b55013464t_00001.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ comm -13 <(sort ../fnames_png_pre.lst) <(sort ../bare_new_fnames_to_check.lst) > ../renames_have_to_happen.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ls ../*.sh
+ls: cannot access '../*.sh': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ls *.sh
+do_rename_if_needed.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ls *.bak
+ls: cannot access '*.bak': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ls ../*.bak
+../fnames_png_pre.lst.bak
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head do_rename_if_needed.sh `
+> ^C
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head do_rename_if_needed.sh
+
+# bad_fname: ./Bodleian-Library-MS-Add-A-263_p0-11.png
+# my_first: Bodleian-Library-MS-Add-A-263_
+# my_end: .png
+# my_second: 0
+# my_unpad: 1
+# my_num: 00001
+mv "./Bodleian-Library-MS-Add-A-263_p0-11.png" "Bodleian-Library-MS-Add-A-263_00001.png"
+
+# bad_fname: ./Bodleian-Library-MS-Add-A-263_p10-76.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ mv do_rename_if_needed.sh ../do_rename_if_needed.sh.pre
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ #while read -r line; do fname_to_rename="${line}"; grep "${fname_to_rename}" ../do_rename_if_needed.sh.pre >> do_rename_imgs_from_pdf.sh ; done < ../renames_have_to_happen.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head ../renames_have_to_happen.lst
+Bodleian-Library-MS-Bodl-168_00001.png
+Bodleian-Library-MS-Bodl-168_00003.png
+Bodleian-Library-MS-Bodl-168_00004.png
+Bodleian-Library-MS-Bodl-168_00005.png
+Bodleian-Library-MS-Bodl-168_00006.png
+Bodleian-Library-MS-Bodl-168_00007.png
+Bodleian-Library-MS-Bodl-168_00008.png
+Bodleian-Library-MS-Bodl-168_00009.png
+Bodleian-Library-MS-Bodl-168_00010.png
+Bodleian-Library-MS-Bodl-168_00011.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ while read -r line; do fname_to_rename="${line}"; grep "${fname_to_rename}" ../do_rename_if_needed.sh.pre >> do_rename_imgs_from_pdf.sh ; done < ../renames_have_to_happen.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s'
+Mon Feb 12 23:42:02 MST 2024
+1707806522
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ wc -l do_rename_imgs_from_pdf.sh
+1197 do_rename_imgs_from_pdf.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ wc -l ../renames_have_to_happen.lst
+1191 ../renames_have_to_happen.lst
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head do_rename_imgs_from_pdf.sh
+mv "./Bodleian-Library-MS-Bodl-168_p0-11.png" "Bodleian-Library-MS-Bodl-168_00001.png"
+mv "./Bodleian-Library-MS-Bodl-168_p2-30.png" "Bodleian-Library-MS-Bodl-168_00003.png"
+mv "./Bodleian-Library-MS-Bodl-168_p3-36.png" "Bodleian-Library-MS-Bodl-168_00004.png"
+mv "./Bodleian-Library-MS-Bodl-168_p4-42.png" "Bodleian-Library-MS-Bodl-168_00005.png"
+mv "./Bodleian-Library-MS-Bodl-168_p5-48.png" "Bodleian-Library-MS-Bodl-168_00006.png"
+mv "./Bodleian-Library-MS-Bodl-168_p6-54.png" "Bodleian-Library-MS-Bodl-168_00007.png"
+mv "./Bodleian-Library-MS-Bodl-168_p7-60.png" "Bodleian-Library-MS-Bodl-168_00008.png"
+mv "./Bodleian-Library-MS-Bodl-168_p8-66.png" "Bodleian-Library-MS-Bodl-168_00009.png"
+mv "./Bodleian-Library-MS-Bodl-168_p9-72.png" "Bodleian-Library-MS-Bodl-168_00010.png"
+mv "./Bodleian-Library-MS-Bodl-168_p10-78.png" "Bodleian-Library-MS-Bodl-168_00011.png"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ vim do_rename_imgs_from_pdf.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head do_rename_imgs_from_pdf.sh
+#/usr/bin/env bash
+mv "./Bodleian-Library-MS-Bodl-168_p0-11.png" "Bodleian-Library-MS-Bodl-168_00001.png"
+mv "./Bodleian-Library-MS-Bodl-168_p2-30.png" "Bodleian-Library-MS-Bodl-168_00003.png"
+mv "./Bodleian-Library-MS-Bodl-168_p3-36.png" "Bodleian-Library-MS-Bodl-168_00004.png"
+mv "./Bodleian-Library-MS-Bodl-168_p4-42.png" "Bodleian-Library-MS-Bodl-168_00005.png"
+mv "./Bodleian-Library-MS-Bodl-168_p5-48.png" "Bodleian-Library-MS-Bodl-168_00006.png"
+mv "./Bodleian-Library-MS-Bodl-168_p6-54.png" "Bodleian-Library-MS-Bodl-168_00007.png"
+mv "./Bodleian-Library-MS-Bodl-168_p7-60.png" "Bodleian-Library-MS-Bodl-168_00008.png"
+mv "./Bodleian-Library-MS-Bodl-168_p8-66.png" "Bodleian-Library-MS-Bodl-168_00009.png"
+mv "./Bodleian-Library-MS-Bodl-168_p9-72.png" "Bodleian-Library-MS-Bodl-168_00010.png"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ chmod a+x do_rename_imgs_from_pdf.sh
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE/cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ vim do_rename_imgs_from_pdf.sh
+
+bballdave025@MY-MACHINE/cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ #  gotta finish the shebang
+
+bballdave025@MY-MACHINE/cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ head do_rename_imgs_from_pdf.sh
+#!/usr/bin/env bash
+mv "./Bodleian-Library-MS-Bodl-168_p0-11.png" "Bodleian-Library-MS-Bodl-168_00001.png"
+mv "./Bodleian-Library-MS-Bodl-168_p2-30.png" "Bodleian-Library-MS-Bodl-168_00003.png"
+mv "./Bodleian-Library-MS-Bodl-168_p3-36.png" "Bodleian-Library-MS-Bodl-168_00004.png"
+mv "./Bodleian-Library-MS-Bodl-168_p4-42.png" "Bodleian-Library-MS-Bodl-168_00005.png"
+mv "./Bodleian-Library-MS-Bodl-168_p5-48.png" "Bodleian-Library-MS-Bodl-168_00006.png"
+mv "./Bodleian-Library-MS-Bodl-168_p6-54.png" "Bodleian-Library-MS-Bodl-168_00007.png"
+mv "./Bodleian-Library-MS-Bodl-168_p7-60.png" "Bodleian-Library-MS-Bodl-168_00008.png"
+mv "./Bodleian-Library-MS-Bodl-168_p8-66.png" "Bodleian-Library-MS-Bodl-168_00009.png"
+mv "./Bodleian-Library-MS-Bodl-168_p9-72.png" "Bodleian-Library-MS-Bodl-168_00010.png"
+
+bballdave025@MY-MACHINE/cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ ./do_rename_imgs_from_pdf.sh 2>&1 | tee ../doing_rename_imgs_from_pdf_$(date +'%s_%Y-%m-%dT%H%M%S%z').out
+mv: cannot stat './Hungary_13634_p0-184.png': No such file or directory
+mv: cannot stat './Hungary_13634_p0-860.png': No such file or directory
+mv: cannot stat './Hungary_muncheni1_p1-3.png': No such file or directory
+mv: cannot stat './Hungary_muncheni1_p1-302.png': No such file or directory
+mv: cannot stat './Hungary_muncheni1_p2-302.png': No such file or directory
+mv: cannot stat './Hungary_muncheni1_p2-6.png': No such file or directory
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+## last command should only show errors; hopefully it shows nothing. It's already showed a couple, but that explains the difference in word count (line) `wc -l`
+
+##  Then, we'll need to try ...
+
+##+ actually, need to figure out the  command
+
+history | grep "fnames_not_pdf2png_renamed.lst"
+
+find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | sort > ../fnames_not_pdf2png_renamed.lst
+
+
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s'
+Mon Feb 12 23:52:27 MST 2024
+1707807147
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ history | grep "fnames_not_pdf2png_renamed.lst"
+  527  find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | sort > ../fnames_not_pdf2png_renamed.lst
+  528  while read -r line; do bad_fname="${line}"; echo; my_first=$(echo "${bad_fname}" | sed 's#^[.]/\(.*\)p\([0-9]\+\)[-][0-9]\+\([.]png\)$#\1#g'); echo "my_first: ${my_first}"; my_end=$(echo "${bad_fname}" | sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\3#g'); echo "my_end: ${my_end}"; my_second=$(echo "${bad_fname}" | sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g'); echo "my_second: $my_second"; my_num=0; my_unpad=$(echo "${my_second}+1" | bc); echo "my_unpad: ${my_unpad}"; my_num=0; if [ $my_unpad -lt 10 ]; then my_num="0000${my_unpad}"; elif [ $my_unpad -lt 100 ]; then my_num="000${my_unpad}"; elif [ $my_unpad -lt 1000 ]; then my_num="00${my_unpad}"; elif [ $my_unpad -lt 10000 ]; then   my_num="0${my_unpad}"; else my_num="${my_unpad}"; fi; echo "my_num: ${my_num}"; new_fname="${my_first}${my_num}${my_end}"; echo "new_fname: ${new_fname}" done < ../fnames_not_pdf2png_renamed.lst | head -n 50
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g');    echo "my_second: $my_second";   my_num=0;   my_unpad=$(echo "${my_second}+1" | bc);   echo "my_unpad: ${my_unpad}";   my_num=0;   if [ $my_unpad -lt 10 ]; then     my_num="0000${my_unpad}";   elif [ $my_unpad -lt 100 ]; then     my_num="000${my_unpad}";   elif [ $my_unpad -lt 1000 ]; then     my_num="00${my_unpad}";   elif [ $my_unpad -lt 10000 ];     then   my_num="0${my_unpad}";   else      my_num="${my_unpad}";   fi;   echo "my_num: ${my_num}";   new_fname="${my_first}${my_num}${my_end}";   echo "new_fname: ${new_fname}"; done < ../fnames_not_pdf2png_renamed.lst | head -n 50
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g');    echo "my_second: $my_second";   my_num=0;   my_unpad=$(echo "${my_second}+1" | bc);   echo "my_unpad: ${my_unpad}";   my_num=0;   if [ $my_unpad -lt 10 ]; then     my_num="0000${my_unpad}";   elif [ $my_unpad -lt 100 ]; then     my_num="000${my_unpad}";   elif [ $my_unpad -lt 1000 ]; then     my_num="00${my_unpad}";   elif [ $my_unpad -lt 10000 ];     then   my_num="0${my_unpad}";   else      my_num="${my_unpad}";   fi;   echo "my_num: ${my_num}";   new_fname="${my_first}${my_num}${my_end}";   echo "new_fname: ${new_fname}"; done < ../fnames_not_pdf2png_renamed.lst | head -n 50
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g');    echo "# my_second: $my_second";   my_num=0;   my_unpad=$(echo "${my_second}+1" | bc);   echo "# my_unpad: ${my_unpad}";   my_num=0;   if [ $my_unpad -lt 10 ]; then     my_num="0000${my_unpad}";   elif [ $my_unpad -lt 100 ]; then     my_num="000${my_unpad}";   elif [ $my_unpad -lt 1000 ]; then     my_num="00${my_unpad}";   elif [ $my_unpad -lt 10000 ];     then   my_num="0${my_unpad}";   else      my_num="${my_unpad}";   fi;   echo "# my_num: ${my_num}";   new_fname="${my_first}${my_num}${my_end}";   echo "new_fname: ${new_fname}" >>     ../new_fnames_see_if_exist.lst;   echo "mv \"${bad_fname}\" \"${new_fname}\""; done < ../fnames_not_pdf2png_renamed.lst | head -n 50
+    sed 's#^[.]/\(.*p\)\([0-9]\+\)[-][0-9]\+\([.]png\)$#\2#g');    echo "# my_second: $my_second";   my_num=0;   my_unpad=$(echo "${my_second}+1" | bc);   echo "# my_unpad: ${my_unpad}";   my_num=0;   if [ $my_unpad -lt 10 ]; then     my_num="0000${my_unpad}";   elif [ $my_unpad -lt 100 ]; then     my_num="000${my_unpad}";   elif [ $my_unpad -lt 1000 ]; then     my_num="00${my_unpad}";   elif [ $my_unpad -lt 10000 ];     then   my_num="0${my_unpad}";   else      my_num="${my_unpad}";   fi;   echo "# my_num: ${my_num}";   new_fname="${my_first}${my_num}${my_end}";   echo "new_fname: ${new_fname}" >>     ../new_fnames_see_if_exist.lst;   echo "mv \"${bad_fname}\" \"${new_fname}\""; done < ../fnames_not_pdf2png_renamed.lst | tee do_rename_if_needed.sh
+  577  history | grep "fnames_not_pdf2png_renamed.lst"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | sort -u | wc -l
+1454
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | head
+./Bodleian-Library-MS-Add-A-263_p105-646.png
+./Bodleian-Library-MS-Laud-Misc-155A_p40-256.png
+./HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_p157-488.png
+./Bodleian-Library-MS-Laud-Misc-155A_p205-1246.png
+./HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_p556-1725.png
+./Bodleian-Library-MS-Add-A-263_p83-514.png
+./UppsalaUniversitet_-_RusticanusDeSanctisC371_p0-2.png
+./HLFulda_-_Gutenberg_Bible_-_100-2o-Ink-A-23_PPN387261257_p651-2020.png
+./StaatsbibliothekBamberg_-_MscNat1_p33-159.png
+./zLOC_-_Book-of-Hours_service-gdc-gdcwdl-wd-l_-12-99-7-wdl_12997-wdl_12997_p20-132.png
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | xargs -I'{}' rm "{}"
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "[/]Seller" | xargs -I'{}' rm "{}"       
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | wc -l
+11479
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "p[0-9]\+[-][0-9]\+[.]png" | sort -u | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ find . -type f -iname "*.png" | grep "[/]Seller" | wc -l
+0
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ # 11.5k files to convert
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$ date && date +'%s'
+Mon Feb 12 23:57:47 MST 2024
+1707807467
+
+bballdave025@MY-MACHINE /cygdrive/d/Datasets_and_Models/P2_RMFs_Less_Noisy/Final_for_FHTC_Paper_Various_Exts/PNG
+$
 
 
 
