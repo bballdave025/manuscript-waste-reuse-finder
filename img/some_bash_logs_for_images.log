@@ -4893,6 +4893,10 @@ $ date && date +'%s' && time mogrify -format jpg -quality 92 -colorspace srgb -t
 Tue Feb 13 01:38:56 MST 2024
 1707813536
 
+###  250 by 01:43:nn MST. Times 4 for a thousand, times 12 for 12k
+###+ 4 min * 4 * 12 = 3hr12m
+###+ so done about 5am, if we're linear.
+
 
 ## And we let them go overnight.
 
