@@ -38,8 +38,8 @@ from tqdm import tqdm
 # fromdir =   "D:/Datasets_and_Models/P2_MSS/_pdfs_for_images_-_workdir"
 # outdir =    "D:/Datasets_and_Models/P2_MSS/_imgs_from_pdfs_-_workdir"
 
-fromdir = "C:/Users/bballdave025/Desktop/_pdfs_for_images_-_workdir"
-outdir =  "C:/Users/bballdave025/Desktop/_imgs_from_pdfs_-_workdir"
+fromdir = "C:/Users/Anast/Desktop/_pdfs_for_images_-_workdir"
+outdir =  "C:/Users/Anast/Desktop/_imgs_from_pdfs_-_workdir"
 
 for each_path in os.listdir(fromdir):
   if ".pdf" in each_path:
