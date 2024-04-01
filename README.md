@@ -6,9 +6,9 @@ Code and research description to be presented at the 2024 [Family History Techno
 
 ## Examples of Reused Manuscript Fragments (and of what are not so classified)
 
-Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments. "Reused Manuscript Fragments" will be the term I use to describe what this tool is designed to find. I will also use <b>RMF</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
+Before my description of the tool, I want to put here several images that illustrate Reused Manuscript Fragments in Bindings. "Reused Manuscript Fragments in Bindings" will be the term I use to describe what this tool is designed to find. I will also use <b>RMFB</b> and such phrases as, "examples of reuse". The images are part of the original dataset.
 
-If you're impatient to know about the tool and the accompanying research, you can see my <b>(2024-02-05) UPDATED</b> [submission for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-05.pdf) as a PDF, or you can use this [LINK FOR THE AFTER-IMAGE PART](#Tool-Description-for-the-Family-History-Technology-Workshop). There's also the option of looking at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
+If you're impatient to know about the tool and the accompanying research, you can see my <b>(2024-02-21) UPDATED</b> [paper submitted for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-21.pdf) as a PDF ([slide deck](RestOfStory_-_MSReuseAsFHInfo.pdf) for the presentation), or you can use this [LINK FOR THE AFTER-IMAGE PART](#Tool-Description-for-the-Family-History-Technology-Workshop). There's also the option of looking at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
 
 
 ### Example 1 : Universitätsbibliothek Heidelberg, Codex Salemitana VII,73
@@ -294,6 +294,6 @@ mogrify -format jpg -quality 92 *.tiff
 
 Coming soon!
 
-For now, you're welcome to look at my <b>(2024-02-05) UPDATED</b> [submission for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-05.pdf) as a PDF.
+For now, you're welcome to look at my <b>(2024-02-21) UPDATED</b> [paper submitted for a Research Talk](./BLACK-D_and_PRISBREY-K_-_FHTC_2024_-_Reused_Manuscript_Fragments_update_2024-02-21.pdf) as a PDF. I think the [slide deck for my presentation](RestOfStory_-_MSReuseAsFHInfo.pdf) (also as a PDF) is even more informative, and it has lots more pictures.
 
 You're also welcome to have a look at [the model-training code](./fndtnl_cnn_ms_reuse_clssfctn_trn.py).
