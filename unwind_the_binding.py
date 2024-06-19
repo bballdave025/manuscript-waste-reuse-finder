@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 
 ##############################################################################
-#
+'''
 # @file: unwind_the_binding.py
 # @author: David BLACK    GH: @bballdave025
 #          based on (and maybe only using)
@@ -20,7 +20,7 @@
 #+ This is part of classifying Manuscript document images for a
 #+ paper/presentation at the Family History Technology Conference
 #+ and for academia.edu
-#
+'''
 ##############################################################################
 
 import os
