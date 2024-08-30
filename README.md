@@ -4,6 +4,9 @@ Code and research description that was presented at the 2024 [Family History Tec
 
 It represents Research and Development on a tool to find document images where manuscript waste (a.k.a. binder's waste, somewhat-a.k.a. manuscript fragments) was used to bind other documents. Such reused manuscripts have been found to contain info relating to such diverse fields as genealogy and family history, manuscript studies, paleography, codicology, and of course fragmentology. It will be shown that it is extendable to finding such things as manuscript repairs (e.g. stitching) and iron-gall-ink corrosion.
 
+<b>Edit:</b> Our [initial-findings paper](https://www.academia.edu/120229768/Manuscript_Fragments_Reused_in_Bindings_as_Untapped_Genealogical_Sources_Opportunities_for_Family_History_and_Manuscript_Studies_to_Easily_Provide_Information_for_One_Another_All_with_the_Help_of_Machine_Learning)
+is now up on Academia.edu . I'm working on a model that can find lots of types of manuscript re-use as well as some other. 
+
 # Fragment Finder
 
 ## Examples of Reused Manuscript Fragments (and of what are not so classified)
@@ -255,12 +258,17 @@ mv "${orig}" "${new_fname}" \
 '
 ```
 
-### Converts
+### Convert Commands
 
 #### 0
 
 ```bash
-identify -format "\n\n%f\n%[magick] %[colorspace] %[type] %[extension] %[bit-depth] %[channels]\n" *.tiff # e.g.
+identify \
+  -format "
+      \n\n%f\n%[magick] %[colorspace] %[type]
+              %[extension] %[bit-depth] %[channels]\n
+" \
+  *.tiff # e.g.
 ```
 
 #### 1
